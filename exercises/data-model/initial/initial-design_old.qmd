@@ -1,0 +1,175 @@
+---
+title: "What should be included in the data model?"
+subtitle: "Initial design"
+---
+
+```{r}
+library(survival)
+library(dplyr)
+library(DBI)
+library(RSQLite)
+library(dbplyr)
+library(DiagrammeR)
+library(dm)
+```
+
+# Task
+
+Starting with the output below:
+
+- What is the key information to keep?
+
+- How would you name these items?
+
+- How would you structure the data model?
+
+
+![KM plot from XYZ.](/img/KM.png){fig-align="center"}
+
+```{r}
+#| code-fold: true
+
+database_connection <- dbConnect(RSQLite::SQLite(), 
+                                 dbname = here::here("exercises/database/ardm.sqlite"))
+
+dbExecute(conn = database_connection, "PRAGMA foreign_keys=ON")
+```
+
+# Initial thoughs
+
+From the shell, three pieces of information stand-out:
+
+1.  KM estimates presented over time
+
+2.  Risk table
+
+3.  Titles and labels
+
+## KM estimates and risk table
+
+To define the plot lines and risk table, we need to keep information on the 
+KM estimates, it's standard error and confidence interval, as well as the number 
+of patients at risk, and number of events. 
+
+::: {.panel-tabset}
+
+# Ideate
+
+Adapting this to a table view, the resulting dataset (i.e., the Analysis
+Results Dataset) would be similar to the table below, if using a long format. 
+In addition, to clarify we give a name and id to the analysis, in case more
+analysis are added to this table.
+
+```{r}
+ard <- tibble(name = character(),
+              id = character(),
+              time = numeric(),
+              n_risk = numeric(),
+              n_event = numeric(),
+              estimate = numeric(),
+              se = numeric(),
+              cil = numeric(),
+              ciu = numeric()
+              )
+
+glimpse(ard)
+```
+
+# Construct a database
+
+For the purpose of connecting the different information pieces, we can 
+simultaneously construct a database following the same structure as the 
+conceived table. For this workshop, we will use a SQL database and will use 
+the identifier as the table primary key.
+
+```{r}
+ard <- dbExecute(database_connection, 
+                 statement = "CREATE TABLE ard
+                              (id varchar NOT NULL PRIMARY KEY,
+                               name varchar,
+                               time varchar,
+                               n_risk varchar,
+                               n_event varchar,
+                               estimate varchar,
+                               se varchar,
+                               cil varchar,
+                               ciu varchar)")
+```
+
+## Titles and labels
+
+For the title and labels, we should store the respective string but can also
+include position information and font weight. In addition, we need to include a 
+link to the *ard* table so this information can be combined to create the KM plot.
+We will call this table, *metadata.*
+
+# Ideate
+
+We will call this table, *metadata.*
+
+```{r}
+metadata <- tibble(name = character(),
+                   id = character(),
+                   ard_id = numeric(),
+                   text = character(),
+                   type = character(),
+                   position = character(),
+                   weight = numeric()
+                   )
+
+glimpse(metadata)
+```
+
+
+# Update the database
+
+```{r}
+metadata <- dbExecute(database_connection, 
+                 statement = "CREATE TABLE metadata
+                              (id varchar NOT NULL PRIMARY KEY,
+                               ard_id varchar,
+                               name varchar,
+                               text varchar,
+                               type varchar,
+                               poistion varchar,
+                               weigth varchar,
+                               FOREIGN KEY(ard_id) REFERENCES ard(id))")
+```
+
+
+# Populate the database according to the model
+
+To calculate the KM estimates we need the source data, namely the ADTTE dataset 
+available in the datasets folder.
+
+```{r}
+adtte <- readRDS(here::here("data/adtte.rds"))
+```
+
+Then, we calculate the KM estimates.
+
+```{r}
+estimates <- survfit(Surv(time = AVAL, event = CNSR) ~ 1, 
+                     data = adtte)
+
+summary(estimates)
+```
+
+# Visualise the database that follows our data model
+
+
+```{r}
+dm_from_con(database_connection) |> 
+  dm_draw()
+```
+
+
+```{r}
+dbDisconnect(database_connection)
+```
+
+
+```{r}
+dm_no_keys <- dm(ard, metadata)
+```
+

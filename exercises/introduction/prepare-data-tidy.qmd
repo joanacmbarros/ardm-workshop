@@ -1,0 +1,61 @@
+---
+title: "Transform source data to a ADTTE format"
+---
+  
+```{r}
+#| message: false
+library(readr)
+library(tidyr)
+library(dplyr)
+library(here)
+```
+
+In this workshop we will use example simulated CTN03 trial data, available in the repository [CovariateAdjustmentTutorial](https://github.com/jbetz-jhu/CovariateAdjustmentTutorial).
+We will convert it to a format similar to CDISC ADTTE for easier manipulation.
+
+```{r}
+data_url <- "https://raw.githubusercontent.com/jbetz-jhu/CovariateAdjustmentTutorial/main/Simulated_MISTIE_III_v1.2.csv"
+sim_miii <- readr::read_csv(data_url)
+```
+
+# Convert data to ADTTE format
+
+```{r}
+adtte <- sim_miii  |>
+  mutate(
+  USUBJID = paste0("MISTIEIII-", sim_participant_id + 1000), # create USUBJID with an expected format
+  PARAM = "Days on study from randomization until death or administrative censoring",
+  PARAMCD = "DTH",
+  AVAL = days_on_study, 
+  CNSR = case_when(
+    died_on_study == 0 ~ 1, 
+    died_on_study == 1 ~ 0),
+  TRTP = arm,
+  TRTPL = case_when(
+    arm == "medical" ~ "Standard of care",
+    arm == "surgical" ~ "MIS plus rt-PA management"
+  ),
+  TRTPN = case_when(
+    arm == "medical" ~ 0,
+    arm == "surgical" ~ 1
+  ),
+  .keep = "used"
+) |> 
+  select(-c(sim_participant_id, arm, days_on_study, died_on_study))
+
+attr(adtte$USUBJID, "label") <- "Unique subject identifer"
+attr(adtte$TRTP, "label") <- "Planned treatment"
+attr(adtte$TRTPN, "label") <- "Planned treatment (N)"
+attr(adtte$AVAL, "label") <- "Time on study (days)"
+attr(adtte$PARAM, "label") <- "Parameter"
+attr(adtte$PARAMCD, "label") <- "Parameter code"
+attr(adtte$CNSR, "label") <- "Censoring"
+```
+
+# Save datasets to RDS and CSV
+
+```{r}
+saveRDS(adtte, file = here("data","adtte.rds"))
+write_csv(adtte, file = here("data", "adtte.csv"))
+```
+

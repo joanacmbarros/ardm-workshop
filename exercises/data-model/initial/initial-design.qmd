@@ -1,0 +1,300 @@
+---
+title: "What should be included in the data model?"
+subtitle: "Initial design"
+---
+
+```{r}
+#| message: false
+
+library(survival)
+library(dplyr)
+library(dbplyr)
+library(broom)
+library(DiagrammeR)
+library(dm)
+library(ggplot2)
+```
+
+# Task
+
+Starting with the output below:
+
+- What is the key information to keep?
+
+- How would you name these items?
+
+- How would you structure the data model?
+
+
+![KM plot from XYZ.](/img/KM.png){fig-align="center"}
+
+# Initial thoughs
+
+From the shell, three pieces of information stand-out:
+
+1.  KM estimates presented over time
+
+2.  Risk table
+
+3.  Titles and labels
+
+## KM estimates and risk table
+
+To define the plot lines and risk table, we need to keep information on the 
+KM estimates, its standard error and confidence interval, as well as the number 
+of patients at risk, and number of events. 
+
+Adapting this to a table view, the resulting dataset (i.e., the Analysis
+Results Dataset) could be similar to the table below using a long format. 
+In addition, we should give a name and id to the analysis in case more
+analysis are added to this table.
+
+```{r}
+ard <- tibble(name = character(),
+              id = character(),
+              strata = character(),
+              time = numeric(),
+              n_risk = numeric(),
+              n_event = numeric(),
+              estimate = numeric(),
+              se = numeric(),
+              cil = numeric(),
+              ciu = numeric()
+              )
+
+glimpse(ard)
+```
+
+## Titles and labels
+
+For the title and labels, we should store the respective string and can also
+include position information and font weight. In addition, we need to include a 
+link to the *ard* table so this information can be combined to create the KM plot.
+We will call this table, *metadata.*
+
+```{r}
+metadata <- tibble(name = character(),
+                   id = character(),
+                   ard_id = numeric(),
+                   text = character(),
+                   type = character(),
+                   location = character(),
+                   position = character(),
+                   weight = numeric()
+                   )
+
+glimpse(metadata)
+```
+
+# Populate the tables 
+
+## *ard* table
+
+To calculate the KM estimates we need the source data, namely the ADTTE dataset 
+available in the datasets folder.
+
+```{r}
+adtte <- readRDS(here::here("data/adtte.rds"))
+```
+
+Then, we calculate the KM estimates using {survival} and store the information with
+the names and structure defined earlier.
+
+```{r}
+estimates <- survfit(Surv(time = AVAL, event = CNSR) ~ TRTP, 
+                     data = adtte)
+
+ard <- broom::tidy(estimates) |>
+  mutate(name = "survival_01",
+         id = "ARD01") |> 
+  select(name, id, strata, time, n.risk, n.event, 
+         n.censor, estimate, std.error, conf.high, 
+         conf.low) |> 
+  rename(n_risk = n.risk,
+         n_event = n.event,
+         n_censor = n.censor,
+         se = std.error,
+         ci_upper = conf.high, 
+         ci_lower = conf.low) |> 
+  as.data.frame()
+
+glimpse(ard)
+```
+
+## *metadata* table
+
+Next, we populate the metadata table. The 
+unique ids are pivotal as they will allow the tables to link to one another.
+
+```{r}
+metadata <- data.frame(name = rep("metadata_kmplot_01", 3),
+                   id = rep("MTD01", 3),
+                   ard_id = rep("ARD01", 3),
+                   text = c("KM plot", "Percent of Patients Alive", "Months since Randomization"),
+                   type = c("title", "ylab", "xlab"),
+                   location = c("top", NA, NA),
+                   position = c("left", "center", "center"),
+                   weight = rep("bold", 3)
+                   )
+glimpse(metadata)
+```
+
+
+# Visualise the tables that follow our data model
+
+To view how the combination of the two tables storing the analysis results and 
+metadata we can use a diagram and leverage the unique identifies to create primary keys
+and a foreign key in *metadata* by referencing the primary key of *ard* table.
+
+```{r}
+ardm <- dm(ard, metadata) |> 
+  dm_add_pk(table = ard, columns = id) |> 
+  dm_add_pk(table = metadata, columns = id) |> 
+  dm_add_fk(table = metadata, columns = ard_id, ref_table = ard, ref_columns = id)
+
+ardm |> dm_draw(view_type = "all")
+```
+
+# Recreate the KM plot
+
+First, we extract the tile and labels from *metadata*. Since this is a simple
+example, the querying process is straightforward. In a more complex situation, 
+one would need to include the analysis name and id in the query.
+
+```{r}
+title <- metadata |> 
+  filter(type == "title")
+
+xlab <- metadata |> 
+  filter(type == "xlab")
+
+ylab <- metadata |> 
+  filter(type == "ylab")
+```
+
+To create the KM plot, we can use ggsurvplot() from {survminer}. We will need to 
+sightly adapt the names of the columns in the data to fit the function requirements.
+
+```{r}
+renamed_ard <- ard |> 
+  rename(surv = estimate,
+         n.censor = n_censor,
+         n.risk = n_risk,
+         upper = ci_upper,
+         lower = ci_lower)
+```
+
+
+```{r}
+curves_plot <- ggsurvplot_df(renamed_ard, 
+                       fun = "pct", 
+                       surv.geom = geom_line, 
+                       censor = TRUE,
+                       title = title$text,
+                       ylab = ylab$text,
+                       conf.int = TRUE) + 
+  theme(plot.title = element_text(face = title$weight),
+        axis.title.y = element_text(face = ylab$weight))
+
+curves_plot
+```
+To add the risk table, we can use another function from {survminer}. However, 
+these functions are limited when provided with analysis results datasets rather 
+than a survfit object. Due to this reason, we create a function inspired by 
+*summary.survfit* to create the risk table and then use its output on *ggsurvtable()*
+to get a risk table with similar styling as the curve_plot.
+Finally, we combine both plots to recreate the original.
+
+
+```{r}
+get_risk_table <- function(ard, times = NULL, scale = 1){
+  
+  surv <- as.matrix(ard$surv)
+  n.risk <- as.matrix(ard$n.risk)
+  
+  if (is.null(ard$strata)) {
+    nstrat <- 1
+    stemp <- rep(1, nrow(surv))
+    strata.names <- ""
+  }else{
+    strata_counts <- table(ard$strata)
+    nstrat <- length(strata_counts)
+    stemp <- rep(1:nstrat, strata_counts)
+    indx1 <- indx2 <- newtimes <- vector('list', nstrat)
+    n <- length(stemp)
+    strata.names <- names(strata_counts)
+  }
+  
+  if (missing(times)) {
+    times <- ard$time
+    strata <- factor(stemp, labels=strata.names)
+  }else {  
+    times <- sort(times)
+  }
+  
+  for (i in 1:nstrat) {
+    who <- (1:n)[stemp==i] 
+    stime <- ard$time[who]
+    
+    # First, toss any printing times that are outside our range
+    mintime <- min(stime, 0)
+    ptimes <- times[times >= mintime]
+    maxtime <- max(stime)
+    ptimes <- ptimes[ptimes <= maxtime]
+    
+    newtimes[[i]] <- ptimes
+    
+    ntime <- length(stime)  #number of points
+    temp1 <- approx(c(mintime-1, stime), 0:ntime, xout=ptimes,
+                    method='constant', f=0, rule=2)$y
+    indx1[[i]] <- ifelse(temp1==0, 1, 1+ who[pmax(1,temp1)])
+    
+    
+    if(ntime ==1)temp1 <- rep(1, length(ptimes)) 
+    else temp1 <- approx(stime, 1:ntime, xout=ptimes,
+                         method='constant', f=1, rule=2)$y
+    
+    indx2[[i]] <- ifelse(ptimes>max(stime), 
+                         length(n.risk), who[temp1])
+  }
+  
+  times  <- unlist(newtimes)
+  n.risk <-  unlist(n.risk)
+  
+  indx1 <- unlist(indx1)
+  surv <- (rbind(1.,surv))[indx1,,drop=FALSE]
+  n.risk <- n.risk[unlist(indx2),, drop=FALSE]
+  
+  if (!is.null(ard$strata)) {
+    scount <- unlist(lapply(newtimes, length))
+    strata <- factor(rep(1:nstrat, scount), labels=names(strata_counts))
+  }
+  
+  temp <- list(time=times/scale, n.risk=n.risk, surv=surv, strata = strata)
+  
+  if (ncol(surv)==1) {
+    temp$surv <- drop(temp$surv)
+    temp$n.risk <- drop(temp$n.risk)
+  }
+  
+  result <- as.data.frame(temp)
+  
+  result
+  
+}
+
+```
+
+```{r}
+risk_table <- get_risk_table(ard = renamed_ard, times = c(0,100,200,300,400))
+
+
+risk_table_plot <- ggsurvtable(rtable, survtable = "risk.table", ylab = "") +
+  scale_y_discrete() 
+
+
+ggarrange(curves_plot, risk_table_plot, 
+          nrow = 2, align = "v", heights = c(2,1))
+```
+
+
