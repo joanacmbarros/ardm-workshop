@@ -15,7 +15,7 @@ We will convert it to a format similar to CDISC ADTTE for easier manipulation.
 
 ```{r}
 data_url <- "https://raw.githubusercontent.com/jbetz-jhu/CovariateAdjustmentTutorial/main/Simulated_MISTIE_III_v1.2.csv"
-sim_miii <- readr::read_csv(data_url)
+sim_miii <- readr::read_csv(data_url, show_col_types = FALSE)
 ```
 
 # Convert data to ADTTE format
@@ -55,7 +55,7 @@ attr(adtte$CNSR, "label") <- "Censoring"
 # Save datasets to RDS and CSV
 
 ```{r}
-saveRDS(adtte, file = here("data","adtte.rds"))
-write_csv(adtte, file = here("data", "adtte.csv"))
+saveRDS(adtte, file = here("exercises","data","adtte.rds"))
+write_csv(adtte, file = here("exercises","data", "adtte.csv"))
 ```
 

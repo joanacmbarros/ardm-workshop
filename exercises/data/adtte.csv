@@ -1,0 +1,1001 @@
+USUBJID,PARAM,PARAMCD,AVAL,CNSR,TRTP,TRTPL,TRTPN
+MISTIEIII-1001,Days on study from randomization until death or administrative censoring,DTH,2,0,medical,Standard of care,0
+MISTIEIII-1002,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1003,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1004,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1005,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1006,Days on study from randomization until death or administrative censoring,DTH,23,0,medical,Standard of care,0
+MISTIEIII-1007,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1008,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1009,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1010,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1011,Days on study from randomization until death or administrative censoring,DTH,9,0,medical,Standard of care,0
+MISTIEIII-1012,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1013,Days on study from randomization until death or administrative censoring,DTH,2,0,medical,Standard of care,0
+MISTIEIII-1014,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1015,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1016,Days on study from randomization until death or administrative censoring,DTH,111,0,medical,Standard of care,0
+MISTIEIII-1017,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1018,Days on study from randomization until death or administrative censoring,DTH,273,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1019,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1020,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1021,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1022,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1023,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1024,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1025,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1026,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1027,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1028,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1029,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1030,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1031,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1032,Days on study from randomization until death or administrative censoring,DTH,69,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1033,Days on study from randomization until death or administrative censoring,DTH,13,0,medical,Standard of care,0
+MISTIEIII-1034,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1035,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1036,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1037,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1038,Days on study from randomization until death or administrative censoring,DTH,19,0,medical,Standard of care,0
+MISTIEIII-1039,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1040,Days on study from randomization until death or administrative censoring,DTH,178,1,medical,Standard of care,0
+MISTIEIII-1041,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1042,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1043,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1044,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1045,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1046,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1047,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1048,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1049,Days on study from randomization until death or administrative censoring,DTH,2,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1050,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1051,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1052,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1053,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1054,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1055,Days on study from randomization until death or administrative censoring,DTH,21,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1056,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1057,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1058,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1059,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1060,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1061,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1062,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1063,Days on study from randomization until death or administrative censoring,DTH,369,1,medical,Standard of care,0
+MISTIEIII-1064,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1065,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1066,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1067,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1068,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1069,Days on study from randomization until death or administrative censoring,DTH,122,0,medical,Standard of care,0
+MISTIEIII-1070,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1071,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1072,Days on study from randomization until death or administrative censoring,DTH,3,0,medical,Standard of care,0
+MISTIEIII-1073,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1074,Days on study from randomization until death or administrative censoring,DTH,169,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1075,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1076,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1077,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1078,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1079,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1080,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1081,Days on study from randomization until death or administrative censoring,DTH,31,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1082,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1083,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1084,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1085,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1086,Days on study from randomization until death or administrative censoring,DTH,75,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1087,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1088,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1089,Days on study from randomization until death or administrative censoring,DTH,369,1,medical,Standard of care,0
+MISTIEIII-1090,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1091,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1092,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1093,Days on study from randomization until death or administrative censoring,DTH,339,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1094,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1095,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1096,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1097,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1098,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1099,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1100,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1101,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1102,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1103,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1104,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1105,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1106,Days on study from randomization until death or administrative censoring,DTH,180,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1107,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1108,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1109,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1110,Days on study from randomization until death or administrative censoring,DTH,10,0,medical,Standard of care,0
+MISTIEIII-1111,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1112,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1113,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1114,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1115,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1116,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1117,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1118,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1119,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1120,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1121,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1122,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1123,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1124,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1125,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1126,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1127,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1128,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1129,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1130,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1131,Days on study from randomization until death or administrative censoring,DTH,109,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1132,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1133,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1134,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1135,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1136,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1137,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1138,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1139,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1140,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1141,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1142,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1143,Days on study from randomization until death or administrative censoring,DTH,111,0,medical,Standard of care,0
+MISTIEIII-1144,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1145,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1146,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1147,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1148,Days on study from randomization until death or administrative censoring,DTH,19,0,medical,Standard of care,0
+MISTIEIII-1149,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1150,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1151,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1152,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1153,Days on study from randomization until death or administrative censoring,DTH,27,0,medical,Standard of care,0
+MISTIEIII-1154,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1155,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1156,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1157,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1158,Days on study from randomization until death or administrative censoring,DTH,253,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1159,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1160,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1161,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1162,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1163,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1164,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1165,Days on study from randomization until death or administrative censoring,DTH,25,0,medical,Standard of care,0
+MISTIEIII-1166,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1167,Days on study from randomization until death or administrative censoring,DTH,248,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1168,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1169,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1170,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1171,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1172,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1173,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1174,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1175,Days on study from randomization until death or administrative censoring,DTH,66,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1176,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1177,Days on study from randomization until death or administrative censoring,DTH,81,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1178,Days on study from randomization until death or administrative censoring,DTH,171,0,medical,Standard of care,0
+MISTIEIII-1179,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1180,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1181,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1182,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1183,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1184,Days on study from randomization until death or administrative censoring,DTH,125,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1185,Days on study from randomization until death or administrative censoring,DTH,144,0,medical,Standard of care,0
+MISTIEIII-1186,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1187,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1188,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1189,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1190,Days on study from randomization until death or administrative censoring,DTH,2,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1191,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1192,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1193,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1194,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1195,Days on study from randomization until death or administrative censoring,DTH,293,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1196,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1197,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1198,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1199,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1200,Days on study from randomization until death or administrative censoring,DTH,117,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1201,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1202,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1203,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1204,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1205,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1206,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1207,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1208,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1209,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1210,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1211,Days on study from randomization until death or administrative censoring,DTH,1,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1212,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1213,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1214,Days on study from randomization until death or administrative censoring,DTH,2,0,medical,Standard of care,0
+MISTIEIII-1215,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1216,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1217,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1218,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1219,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1220,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1221,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1222,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1223,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1224,Days on study from randomization until death or administrative censoring,DTH,76,0,medical,Standard of care,0
+MISTIEIII-1225,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1226,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1227,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1228,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1229,Days on study from randomization until death or administrative censoring,DTH,28,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1230,Days on study from randomization until death or administrative censoring,DTH,57,0,medical,Standard of care,0
+MISTIEIII-1231,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1232,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1233,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1234,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1235,Days on study from randomization until death or administrative censoring,DTH,88,0,medical,Standard of care,0
+MISTIEIII-1236,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1237,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1238,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1239,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1240,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1241,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1242,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1243,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1244,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1245,Days on study from randomization until death or administrative censoring,DTH,61,0,medical,Standard of care,0
+MISTIEIII-1246,Days on study from randomization until death or administrative censoring,DTH,57,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1247,Days on study from randomization until death or administrative censoring,DTH,126,0,medical,Standard of care,0
+MISTIEIII-1248,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1249,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1250,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1251,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1252,Days on study from randomization until death or administrative censoring,DTH,75,0,medical,Standard of care,0
+MISTIEIII-1253,Days on study from randomization until death or administrative censoring,DTH,9,0,medical,Standard of care,0
+MISTIEIII-1254,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1255,Days on study from randomization until death or administrative censoring,DTH,3,0,medical,Standard of care,0
+MISTIEIII-1256,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1257,Days on study from randomization until death or administrative censoring,DTH,14,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1258,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1259,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1260,Days on study from randomization until death or administrative censoring,DTH,24,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1261,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1262,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1263,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1264,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1265,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1266,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1267,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1268,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1269,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1270,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1271,Days on study from randomization until death or administrative censoring,DTH,13,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1272,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1273,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1274,Days on study from randomization until death or administrative censoring,DTH,78,0,medical,Standard of care,0
+MISTIEIII-1275,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1276,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1277,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1278,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1279,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1280,Days on study from randomization until death or administrative censoring,DTH,27,0,medical,Standard of care,0
+MISTIEIII-1281,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1282,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1283,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1284,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1285,Days on study from randomization until death or administrative censoring,DTH,281,0,medical,Standard of care,0
+MISTIEIII-1286,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1287,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1288,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1289,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1290,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1291,Days on study from randomization until death or administrative censoring,DTH,3,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1292,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1293,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1294,Days on study from randomization until death or administrative censoring,DTH,13,0,medical,Standard of care,0
+MISTIEIII-1295,Days on study from randomization until death or administrative censoring,DTH,39,0,medical,Standard of care,0
+MISTIEIII-1296,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1297,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1298,Days on study from randomization until death or administrative censoring,DTH,37,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1299,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1300,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1301,Days on study from randomization until death or administrative censoring,DTH,12,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1302,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1303,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1304,Days on study from randomization until death or administrative censoring,DTH,6,0,medical,Standard of care,0
+MISTIEIII-1305,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1306,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1307,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1308,Days on study from randomization until death or administrative censoring,DTH,333,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1309,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1310,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1311,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1312,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1313,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1314,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1315,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1316,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1317,Days on study from randomization until death or administrative censoring,DTH,133,0,medical,Standard of care,0
+MISTIEIII-1318,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1319,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1320,Days on study from randomization until death or administrative censoring,DTH,172,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1321,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1322,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1323,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1324,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1325,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1326,Days on study from randomization until death or administrative censoring,DTH,47,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1327,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1328,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1329,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1330,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1331,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1332,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1333,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1334,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1335,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1336,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1337,Days on study from randomization until death or administrative censoring,DTH,8,0,medical,Standard of care,0
+MISTIEIII-1338,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1339,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1340,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1341,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1342,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1343,Days on study from randomization until death or administrative censoring,DTH,3,0,medical,Standard of care,0
+MISTIEIII-1344,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1345,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1346,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1347,Days on study from randomization until death or administrative censoring,DTH,19,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1348,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1349,Days on study from randomization until death or administrative censoring,DTH,160,0,medical,Standard of care,0
+MISTIEIII-1350,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1351,Days on study from randomization until death or administrative censoring,DTH,50,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1352,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1353,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1354,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1355,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1356,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1357,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1358,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1359,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1360,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1361,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1362,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1363,Days on study from randomization until death or administrative censoring,DTH,75,0,medical,Standard of care,0
+MISTIEIII-1364,Days on study from randomization until death or administrative censoring,DTH,86,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1365,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1366,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1367,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1368,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1369,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1370,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1371,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1372,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1373,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1374,Days on study from randomization until death or administrative censoring,DTH,208,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1375,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1376,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1377,Days on study from randomization until death or administrative censoring,DTH,31,1,medical,Standard of care,0
+MISTIEIII-1378,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1379,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1380,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1381,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1382,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1383,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1384,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1385,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1386,Days on study from randomization until death or administrative censoring,DTH,176,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1387,Days on study from randomization until death or administrative censoring,DTH,139,0,medical,Standard of care,0
+MISTIEIII-1388,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1389,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1390,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1391,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1392,Days on study from randomization until death or administrative censoring,DTH,24,0,medical,Standard of care,0
+MISTIEIII-1393,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1394,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1395,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1396,Days on study from randomization until death or administrative censoring,DTH,5,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1397,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1398,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1399,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1400,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1401,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1402,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1403,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1404,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1405,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1406,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1407,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1408,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1409,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1410,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1411,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1412,Days on study from randomization until death or administrative censoring,DTH,10,0,medical,Standard of care,0
+MISTIEIII-1413,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1414,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1415,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1416,Days on study from randomization until death or administrative censoring,DTH,72,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1417,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1418,Days on study from randomization until death or administrative censoring,DTH,33,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1419,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1420,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1421,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1422,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1423,Days on study from randomization until death or administrative censoring,DTH,12,0,medical,Standard of care,0
+MISTIEIII-1424,Days on study from randomization until death or administrative censoring,DTH,62,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1425,Days on study from randomization until death or administrative censoring,DTH,58,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1426,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1427,Days on study from randomization until death or administrative censoring,DTH,59,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1428,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1429,Days on study from randomization until death or administrative censoring,DTH,124,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1430,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1431,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1432,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1433,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1434,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1435,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1436,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1437,Days on study from randomization until death or administrative censoring,DTH,316,0,medical,Standard of care,0
+MISTIEIII-1438,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1439,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1440,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1441,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1442,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1443,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1444,Days on study from randomization until death or administrative censoring,DTH,15,0,medical,Standard of care,0
+MISTIEIII-1445,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1446,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1447,Days on study from randomization until death or administrative censoring,DTH,3,0,medical,Standard of care,0
+MISTIEIII-1448,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1449,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1450,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1451,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1452,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1453,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1454,Days on study from randomization until death or administrative censoring,DTH,369,1,medical,Standard of care,0
+MISTIEIII-1455,Days on study from randomization until death or administrative censoring,DTH,24,0,medical,Standard of care,0
+MISTIEIII-1456,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1457,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1458,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1459,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1460,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1461,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1462,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1463,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1464,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1465,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1466,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1467,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1468,Days on study from randomization until death or administrative censoring,DTH,283,0,medical,Standard of care,0
+MISTIEIII-1469,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1470,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1471,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1472,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1473,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1474,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1475,Days on study from randomization until death or administrative censoring,DTH,2,0,medical,Standard of care,0
+MISTIEIII-1476,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1477,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1478,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1479,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1480,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1481,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1482,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1483,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1484,Days on study from randomization until death or administrative censoring,DTH,111,0,medical,Standard of care,0
+MISTIEIII-1485,Days on study from randomization until death or administrative censoring,DTH,176,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1486,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1487,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1488,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1489,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1490,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1491,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1492,Days on study from randomization until death or administrative censoring,DTH,51,0,medical,Standard of care,0
+MISTIEIII-1493,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1494,Days on study from randomization until death or administrative censoring,DTH,118,0,medical,Standard of care,0
+MISTIEIII-1495,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1496,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1497,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1498,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1499,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1500,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1501,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1502,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1503,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1504,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1505,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1506,Days on study from randomization until death or administrative censoring,DTH,135,0,medical,Standard of care,0
+MISTIEIII-1507,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1508,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1509,Days on study from randomization until death or administrative censoring,DTH,3,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1510,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1511,Days on study from randomization until death or administrative censoring,DTH,13,0,medical,Standard of care,0
+MISTIEIII-1512,Days on study from randomization until death or administrative censoring,DTH,2,0,medical,Standard of care,0
+MISTIEIII-1513,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1514,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1515,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1516,Days on study from randomization until death or administrative censoring,DTH,4,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1517,Days on study from randomization until death or administrative censoring,DTH,38,0,medical,Standard of care,0
+MISTIEIII-1518,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1519,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1520,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1521,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1522,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1523,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1524,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1525,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1526,Days on study from randomization until death or administrative censoring,DTH,21,1,medical,Standard of care,0
+MISTIEIII-1527,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1528,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1529,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1530,Days on study from randomization until death or administrative censoring,DTH,173,0,medical,Standard of care,0
+MISTIEIII-1531,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1532,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1533,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1534,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1535,Days on study from randomization until death or administrative censoring,DTH,23,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1536,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1537,Days on study from randomization until death or administrative censoring,DTH,150,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1538,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1539,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1540,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1541,Days on study from randomization until death or administrative censoring,DTH,3,0,medical,Standard of care,0
+MISTIEIII-1542,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1543,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1544,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1545,Days on study from randomization until death or administrative censoring,DTH,72,0,medical,Standard of care,0
+MISTIEIII-1546,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1547,Days on study from randomization until death or administrative censoring,DTH,10,0,medical,Standard of care,0
+MISTIEIII-1548,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1549,Days on study from randomization until death or administrative censoring,DTH,145,0,medical,Standard of care,0
+MISTIEIII-1550,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1551,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1552,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1553,Days on study from randomization until death or administrative censoring,DTH,61,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1554,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1555,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1556,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1557,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1558,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1559,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1560,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1561,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1562,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1563,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1564,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1565,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1566,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1567,Days on study from randomization until death or administrative censoring,DTH,27,0,medical,Standard of care,0
+MISTIEIII-1568,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1569,Days on study from randomization until death or administrative censoring,DTH,151,0,medical,Standard of care,0
+MISTIEIII-1570,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1571,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1572,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1573,Days on study from randomization until death or administrative censoring,DTH,105,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1574,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1575,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1576,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1577,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1578,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1579,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1580,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1581,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1582,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1583,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1584,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1585,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1586,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1587,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1588,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1589,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1590,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1591,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1592,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1593,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1594,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1595,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1596,Days on study from randomization until death or administrative censoring,DTH,286,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1597,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1598,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1599,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1600,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1601,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1602,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1603,Days on study from randomization until death or administrative censoring,DTH,364,1,medical,Standard of care,0
+MISTIEIII-1604,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1605,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1606,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1607,Days on study from randomization until death or administrative censoring,DTH,339,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1608,Days on study from randomization until death or administrative censoring,DTH,40,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1609,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1610,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1611,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1612,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1613,Days on study from randomization until death or administrative censoring,DTH,82,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1614,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1615,Days on study from randomization until death or administrative censoring,DTH,4,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1616,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1617,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1618,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1619,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1620,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1621,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1622,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1623,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1624,Days on study from randomization until death or administrative censoring,DTH,38,0,medical,Standard of care,0
+MISTIEIII-1625,Days on study from randomization until death or administrative censoring,DTH,10,0,medical,Standard of care,0
+MISTIEIII-1626,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1627,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1628,Days on study from randomization until death or administrative censoring,DTH,113,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1629,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1630,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1631,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1632,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1633,Days on study from randomization until death or administrative censoring,DTH,53,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1634,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1635,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1636,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1637,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1638,Days on study from randomization until death or administrative censoring,DTH,21,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1639,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1640,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1641,Days on study from randomization until death or administrative censoring,DTH,6,0,medical,Standard of care,0
+MISTIEIII-1642,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1643,Days on study from randomization until death or administrative censoring,DTH,10,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1644,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1645,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1646,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1647,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1648,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1649,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1650,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1651,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1652,Days on study from randomization until death or administrative censoring,DTH,50,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1653,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1654,Days on study from randomization until death or administrative censoring,DTH,335,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1655,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1656,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1657,Days on study from randomization until death or administrative censoring,DTH,13,0,medical,Standard of care,0
+MISTIEIII-1658,Days on study from randomization until death or administrative censoring,DTH,3,0,medical,Standard of care,0
+MISTIEIII-1659,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1660,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1661,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1662,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1663,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1664,Days on study from randomization until death or administrative censoring,DTH,32,0,medical,Standard of care,0
+MISTIEIII-1665,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1666,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1667,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1668,Days on study from randomization until death or administrative censoring,DTH,14,0,medical,Standard of care,0
+MISTIEIII-1669,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1670,Days on study from randomization until death or administrative censoring,DTH,113,0,medical,Standard of care,0
+MISTIEIII-1671,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1672,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1673,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1674,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1675,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1676,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1677,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1678,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1679,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1680,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1681,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1682,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1683,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1684,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1685,Days on study from randomization until death or administrative censoring,DTH,20,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1686,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1687,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1688,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1689,Days on study from randomization until death or administrative censoring,DTH,35,0,medical,Standard of care,0
+MISTIEIII-1690,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1691,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1692,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1693,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-1694,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1695,Days on study from randomization until death or administrative censoring,DTH,235,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1696,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1697,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1698,Days on study from randomization until death or administrative censoring,DTH,172,0,medical,Standard of care,0
+MISTIEIII-1699,Days on study from randomization until death or administrative censoring,DTH,66,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1700,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1701,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1702,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1703,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1704,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1705,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1706,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1707,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1708,Days on study from randomization until death or administrative censoring,DTH,13,0,medical,Standard of care,0
+MISTIEIII-1709,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1710,Days on study from randomization until death or administrative censoring,DTH,369,1,medical,Standard of care,0
+MISTIEIII-1711,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1712,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1713,Days on study from randomization until death or administrative censoring,DTH,16,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1714,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1715,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1716,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1717,Days on study from randomization until death or administrative censoring,DTH,24,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1718,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1719,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1720,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1721,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1722,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1723,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1724,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1725,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1726,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1727,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1728,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1729,Days on study from randomization until death or administrative censoring,DTH,71,0,medical,Standard of care,0
+MISTIEIII-1730,Days on study from randomization until death or administrative censoring,DTH,16,0,medical,Standard of care,0
+MISTIEIII-1731,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1732,Days on study from randomization until death or administrative censoring,DTH,23,0,medical,Standard of care,0
+MISTIEIII-1733,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1734,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1735,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1736,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1737,Days on study from randomization until death or administrative censoring,DTH,164,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1738,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1739,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1740,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1741,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1742,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1743,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1744,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1745,Days on study from randomization until death or administrative censoring,DTH,90,0,medical,Standard of care,0
+MISTIEIII-1746,Days on study from randomization until death or administrative censoring,DTH,357,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1747,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1748,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1749,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1750,Days on study from randomization until death or administrative censoring,DTH,16,0,medical,Standard of care,0
+MISTIEIII-1751,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1752,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1753,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1754,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1755,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1756,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1757,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1758,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1759,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1760,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1761,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1762,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1763,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1764,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1765,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1766,Days on study from randomization until death or administrative censoring,DTH,18,0,medical,Standard of care,0
+MISTIEIII-1767,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1768,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1769,Days on study from randomization until death or administrative censoring,DTH,164,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1770,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1771,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1772,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1773,Days on study from randomization until death or administrative censoring,DTH,14,0,medical,Standard of care,0
+MISTIEIII-1774,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1775,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1776,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1777,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1778,Days on study from randomization until death or administrative censoring,DTH,159,0,medical,Standard of care,0
+MISTIEIII-1779,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1780,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1781,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1782,Days on study from randomization until death or administrative censoring,DTH,55,0,medical,Standard of care,0
+MISTIEIII-1783,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1784,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1785,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1786,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1787,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1788,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1789,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1790,Days on study from randomization until death or administrative censoring,DTH,369,1,medical,Standard of care,0
+MISTIEIII-1791,Days on study from randomization until death or administrative censoring,DTH,368,1,medical,Standard of care,0
+MISTIEIII-1792,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1793,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1794,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1795,Days on study from randomization until death or administrative censoring,DTH,370,1,medical,Standard of care,0
+MISTIEIII-1796,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1797,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1798,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1799,Days on study from randomization until death or administrative censoring,DTH,202,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1800,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1801,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1802,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1803,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1804,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1805,Days on study from randomization until death or administrative censoring,DTH,187,1,medical,Standard of care,0
+MISTIEIII-1806,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1807,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1808,Days on study from randomization until death or administrative censoring,DTH,20,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1809,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1810,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1811,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1812,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1813,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1814,Days on study from randomization until death or administrative censoring,DTH,3,0,medical,Standard of care,0
+MISTIEIII-1815,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1816,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1817,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1818,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1819,Days on study from randomization until death or administrative censoring,DTH,371,1,medical,Standard of care,0
+MISTIEIII-1820,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1821,Days on study from randomization until death or administrative censoring,DTH,11,0,medical,Standard of care,0
+MISTIEIII-1822,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1823,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1824,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1825,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1826,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1827,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1828,Days on study from randomization until death or administrative censoring,DTH,377,1,medical,Standard of care,0
+MISTIEIII-1829,Days on study from randomization until death or administrative censoring,DTH,367,1,medical,Standard of care,0
+MISTIEIII-1830,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1831,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1832,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1833,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1834,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1835,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1836,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1837,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1838,Days on study from randomization until death or administrative censoring,DTH,115,0,medical,Standard of care,0
+MISTIEIII-1839,Days on study from randomization until death or administrative censoring,DTH,374,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1840,Days on study from randomization until death or administrative censoring,DTH,54,0,medical,Standard of care,0
+MISTIEIII-1841,Days on study from randomization until death or administrative censoring,DTH,15,0,medical,Standard of care,0
+MISTIEIII-1842,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1843,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1844,Days on study from randomization until death or administrative censoring,DTH,6,0,medical,Standard of care,0
+MISTIEIII-1845,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1846,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1847,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1848,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1849,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1850,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1851,Days on study from randomization until death or administrative censoring,DTH,149,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1852,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1853,Days on study from randomization until death or administrative censoring,DTH,55,0,medical,Standard of care,0
+MISTIEIII-1854,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1855,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1856,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1857,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1858,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1859,Days on study from randomization until death or administrative censoring,DTH,114,0,medical,Standard of care,0
+MISTIEIII-1860,Days on study from randomization until death or administrative censoring,DTH,368,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1861,Days on study from randomization until death or administrative censoring,DTH,356,1,medical,Standard of care,0
+MISTIEIII-1862,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1863,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1864,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1865,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1866,Days on study from randomization until death or administrative censoring,DTH,28,1,medical,Standard of care,0
+MISTIEIII-1867,Days on study from randomization until death or administrative censoring,DTH,365,1,medical,Standard of care,0
+MISTIEIII-1868,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1869,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1870,Days on study from randomization until death or administrative censoring,DTH,2,0,medical,Standard of care,0
+MISTIEIII-1871,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1872,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1873,Days on study from randomization until death or administrative censoring,DTH,152,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1874,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1875,Days on study from randomization until death or administrative censoring,DTH,369,1,medical,Standard of care,0
+MISTIEIII-1876,Days on study from randomization until death or administrative censoring,DTH,363,1,medical,Standard of care,0
+MISTIEIII-1877,Days on study from randomization until death or administrative censoring,DTH,77,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1878,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1879,Days on study from randomization until death or administrative censoring,DTH,364,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1880,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1881,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1882,Days on study from randomization until death or administrative censoring,DTH,30,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1883,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1884,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1885,Days on study from randomization until death or administrative censoring,DTH,362,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1886,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1887,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1888,Days on study from randomization until death or administrative censoring,DTH,359,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1889,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1890,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1891,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1892,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1893,Days on study from randomization until death or administrative censoring,DTH,354,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1894,Days on study from randomization until death or administrative censoring,DTH,74,0,medical,Standard of care,0
+MISTIEIII-1895,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1896,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1897,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1898,Days on study from randomization until death or administrative censoring,DTH,378,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1899,Days on study from randomization until death or administrative censoring,DTH,100,0,medical,Standard of care,0
+MISTIEIII-1900,Days on study from randomization until death or administrative censoring,DTH,65,1,medical,Standard of care,0
+MISTIEIII-1901,Days on study from randomization until death or administrative censoring,DTH,3,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1902,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1903,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1904,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1905,Days on study from randomization until death or administrative censoring,DTH,23,0,medical,Standard of care,0
+MISTIEIII-1906,Days on study from randomization until death or administrative censoring,DTH,6,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1907,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1908,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1909,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1910,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1911,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1912,Days on study from randomization until death or administrative censoring,DTH,1,0,medical,Standard of care,0
+MISTIEIII-1913,Days on study from randomization until death or administrative censoring,DTH,352,1,medical,Standard of care,0
+MISTIEIII-1914,Days on study from randomization until death or administrative censoring,DTH,70,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1915,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1916,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1917,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1918,Days on study from randomization until death or administrative censoring,DTH,34,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1919,Days on study from randomization until death or administrative censoring,DTH,353,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1920,Days on study from randomization until death or administrative censoring,DTH,19,0,medical,Standard of care,0
+MISTIEIII-1921,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1922,Days on study from randomization until death or administrative censoring,DTH,22,0,medical,Standard of care,0
+MISTIEIII-1923,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1924,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1925,Days on study from randomization until death or administrative censoring,DTH,71,0,medical,Standard of care,0
+MISTIEIII-1926,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1927,Days on study from randomization until death or administrative censoring,DTH,366,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1928,Days on study from randomization until death or administrative censoring,DTH,23,0,medical,Standard of care,0
+MISTIEIII-1929,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1930,Days on study from randomization until death or administrative censoring,DTH,155,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1931,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1932,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1933,Days on study from randomization until death or administrative censoring,DTH,373,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1934,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1935,Days on study from randomization until death or administrative censoring,DTH,371,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1936,Days on study from randomization until death or administrative censoring,DTH,361,1,medical,Standard of care,0
+MISTIEIII-1937,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1938,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1939,Days on study from randomization until death or administrative censoring,DTH,363,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1940,Days on study from randomization until death or administrative censoring,DTH,361,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1941,Days on study from randomization until death or administrative censoring,DTH,26,0,medical,Standard of care,0
+MISTIEIII-1942,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1943,Days on study from randomization until death or administrative censoring,DTH,358,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1944,Days on study from randomization until death or administrative censoring,DTH,172,0,medical,Standard of care,0
+MISTIEIII-1945,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1946,Days on study from randomization until death or administrative censoring,DTH,359,1,medical,Standard of care,0
+MISTIEIII-1947,Days on study from randomization until death or administrative censoring,DTH,34,0,medical,Standard of care,0
+MISTIEIII-1948,Days on study from randomization until death or administrative censoring,DTH,63,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1949,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1950,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1951,Days on study from randomization until death or administrative censoring,DTH,374,1,medical,Standard of care,0
+MISTIEIII-1952,Days on study from randomization until death or administrative censoring,DTH,369,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1953,Days on study from randomization until death or administrative censoring,DTH,379,1,medical,Standard of care,0
+MISTIEIII-1954,Days on study from randomization until death or administrative censoring,DTH,376,1,medical,Standard of care,0
+MISTIEIII-1955,Days on study from randomization until death or administrative censoring,DTH,7,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1956,Days on study from randomization until death or administrative censoring,DTH,375,1,medical,Standard of care,0
+MISTIEIII-1957,Days on study from randomization until death or administrative censoring,DTH,126,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1958,Days on study from randomization until death or administrative censoring,DTH,12,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1959,Days on study from randomization until death or administrative censoring,DTH,352,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1960,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1961,Days on study from randomization until death or administrative censoring,DTH,150,0,medical,Standard of care,0
+MISTIEIII-1962,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1963,Days on study from randomization until death or administrative censoring,DTH,355,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1964,Days on study from randomization until death or administrative censoring,DTH,377,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1965,Days on study from randomization until death or administrative censoring,DTH,373,1,medical,Standard of care,0
+MISTIEIII-1966,Days on study from randomization until death or administrative censoring,DTH,11,0,medical,Standard of care,0
+MISTIEIII-1967,Days on study from randomization until death or administrative censoring,DTH,366,1,medical,Standard of care,0
+MISTIEIII-1968,Days on study from randomization until death or administrative censoring,DTH,4,0,medical,Standard of care,0
+MISTIEIII-1969,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1970,Days on study from randomization until death or administrative censoring,DTH,31,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1971,Days on study from randomization until death or administrative censoring,DTH,370,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1972,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1973,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1974,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1975,Days on study from randomization until death or administrative censoring,DTH,379,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1976,Days on study from randomization until death or administrative censoring,DTH,360,1,medical,Standard of care,0
+MISTIEIII-1977,Days on study from randomization until death or administrative censoring,DTH,10,0,medical,Standard of care,0
+MISTIEIII-1978,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1979,Days on study from randomization until death or administrative censoring,DTH,11,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1980,Days on study from randomization until death or administrative censoring,DTH,2,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1981,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1982,Days on study from randomization until death or administrative censoring,DTH,362,1,medical,Standard of care,0
+MISTIEIII-1983,Days on study from randomization until death or administrative censoring,DTH,360,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1984,Days on study from randomization until death or administrative censoring,DTH,365,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1985,Days on study from randomization until death or administrative censoring,DTH,358,1,medical,Standard of care,0
+MISTIEIII-1986,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1987,Days on study from randomization until death or administrative censoring,DTH,372,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1988,Days on study from randomization until death or administrative censoring,DTH,357,1,medical,Standard of care,0
+MISTIEIII-1989,Days on study from randomization until death or administrative censoring,DTH,19,0,surgical,MIS plus rt-PA management,1
+MISTIEIII-1990,Days on study from randomization until death or administrative censoring,DTH,367,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1991,Days on study from randomization until death or administrative censoring,DTH,378,1,medical,Standard of care,0
+MISTIEIII-1992,Days on study from randomization until death or administrative censoring,DTH,356,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1993,Days on study from randomization until death or administrative censoring,DTH,354,1,medical,Standard of care,0
+MISTIEIII-1994,Days on study from randomization until death or administrative censoring,DTH,372,1,medical,Standard of care,0
+MISTIEIII-1995,Days on study from randomization until death or administrative censoring,DTH,253,0,medical,Standard of care,0
+MISTIEIII-1996,Days on study from randomization until death or administrative censoring,DTH,375,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1997,Days on study from randomization until death or administrative censoring,DTH,353,1,medical,Standard of care,0
+MISTIEIII-1998,Days on study from randomization until death or administrative censoring,DTH,376,1,surgical,MIS plus rt-PA management,1
+MISTIEIII-1999,Days on study from randomization until death or administrative censoring,DTH,355,1,medical,Standard of care,0
+MISTIEIII-2000,Days on study from randomization until death or administrative censoring,DTH,1,0,surgical,MIS plus rt-PA management,1
