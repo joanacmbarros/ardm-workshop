@@ -7,12 +7,11 @@ subtitle: "Initial design"
 #| message: false
 
 library(survival)
-library(dplyr)
-library(dbplyr)
+library(survminer)
+library(tidyverse)
+library(here)
 library(broom)
-library(DiagrammeR)
 library(dm)
-library(ggplot2)
 ```
 
 # Task
@@ -94,14 +93,14 @@ To calculate the KM estimates we need the source data, namely the ADTTE dataset
 available in the datasets folder.
 
 ```{r}
-adtte <- readRDS(here::here("data/adtte.rds"))
+adtte <- readRDS(here::here("exercises/data/adtte.rds"))
 ```
 
 Then, we calculate the KM estimates using {survival} and store the information with
 the names and structure defined earlier.
 
 ```{r}
-estimates <- survfit(Surv(time = AVAL, event = CNSR) ~ TRTP, 
+estimates <- survfit(Surv(time = AVAL, event = 1- CNSR) ~ TRTP, 
                      data = adtte)
 
 ard <- broom::tidy(estimates) |>
@@ -289,7 +288,7 @@ get_risk_table <- function(ard, times = NULL, scale = 1){
 risk_table <- get_risk_table(ard = renamed_ard, times = c(0,100,200,300,400))
 
 
-risk_table_plot <- ggsurvtable(rtable, survtable = "risk.table", ylab = "") +
+risk_table_plot <- ggsurvtable(risk_table, survtable = "risk.table", ylab = "") +
   scale_y_discrete() 
 
 
