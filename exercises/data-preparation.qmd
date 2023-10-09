@@ -1,46 +1,74 @@
 ---
 title: "Transform source data to a ADTTE format"
+bibliography: ../extras/bibtex.bib
+title-block-banner: "#1D466C"
+format:
+  html:
+    self-contained: true
+    toc: true
+    toc-location: left
+    toc-depth: 5
+    toc-title: "Table of Contents"
+    citations-hover: true
+    code-copy: true
+    code-fold: show
+    code-block-bg: true
+    code-overflow: wrap
+    highlight-style: github
+    theme: ../custom.scss
 ---
   
 ```{r}
+#| label: load-packages
 #| message: false
+#| echo: false
+
 library(readr)
 library(tidyr)
 library(dplyr)
 library(here)
 ```
 
+#### Get source data
+
 In this workshop we will use example simulated CTN03 trial data, available in the repository [CovariateAdjustmentTutorial](https://github.com/jbetz-jhu/CovariateAdjustmentTutorial).
 We will convert it to a format similar to CDISC ADTTE for easier manipulation.
 
 ```{r}
+#| label: load-data
+#| message: false
+
 data_url <- "https://raw.githubusercontent.com/jbetz-jhu/CovariateAdjustmentTutorial/main/Simulated_MISTIE_III_v1.2.csv"
 sim_miii <- readr::read_csv(data_url, show_col_types = FALSE)
 ```
 
-# Convert data to ADTTE format
+#### Convert data to ADTTE format
 
 ```{r}
-adtte <- sim_miii  |>
+#| label: convert
+#| message: false
+
+adtte <- sim_miii |>
   mutate(
-  USUBJID = paste0("MISTIEIII-", sim_participant_id + 1000), # create USUBJID with an expected format
-  PARAM = "Days on study from randomization until death or administrative censoring",
-  PARAMCD = "DTH",
-  AVAL = days_on_study, 
-  CNSR = case_when(
-    died_on_study == 0 ~ 1, 
-    died_on_study == 1 ~ 0),
-  TRTP = arm,
-  TRTPL = case_when(
-    arm == "medical" ~ "Standard of care",
-    arm == "surgical" ~ "MIS plus rt-PA management"
-  ),
-  TRTPN = case_when(
-    arm == "medical" ~ 0,
-    arm == "surgical" ~ 1
-  ),
-  .keep = "used"
-) |> 
+    USUBJID = paste0("MISTIEIII-", sim_participant_id + 1000), # create USUBJID with an expected format
+    PARAM = "Days on study from randomization until death or administrative censoring",
+    PARAMCD = "DTH",
+    AVAL = days_on_study,
+    CNSR = case_when(
+      died_on_study == 0 ~ 1,
+      died_on_study == 1 ~ 0
+    ),
+    TRTP = arm,
+    TRTPL = case_when(
+      arm == "medical" ~ "Standard of care",
+      arm == "surgical" ~ "MIS plus rt-PA management"
+    ),
+    TRTPN = case_when(
+      arm == "medical" ~ 0,
+      arm == "surgical" ~ 1
+    ),
+    .keep = "used"
+  ) |>
   select(-c(sim_participant_id, arm, days_on_study, died_on_study))
 
 attr(adtte$USUBJID, "label") <- "Unique subject identifer"
@@ -52,10 +80,12 @@ attr(adtte$PARAMCD, "label") <- "Parameter code"
 attr(adtte$CNSR, "label") <- "Censoring"
 ```
 
-# Save datasets to RDS and CSV
+#### Save datasets to RDS and CSV
 
 ```{r}
-saveRDS(adtte, file = here("exercises","data","adtte.rds"))
-write_csv(adtte, file = here("exercises","data", "adtte.csv"))
+#| label: save-data
+
+saveRDS(adtte, file = here("data", "adtte.rds"))
+write_csv(adtte, file = here("data", "adtte.csv"))
 ```
 

@@ -1,0 +1,368 @@
+---
+title: "Exercise 2: Reusing analysis results"
+subtitle: "Sometimes plans change"
+bibliography: ../extras/bibtex.bib
+title-block-banner: "#1D466C"
+format:
+  html:
+    self-contained: true
+    toc: true
+    toc-location: left
+    toc-depth: 5
+    toc-title: "Table of Contents"
+    citations-hover: true
+    code-copy: true
+    code-fold: show
+    code-block-bg: true
+    code-overflow: wrap
+    highlight-style: github
+    theme: ../custom.scss
+---
+
+## Scenario
+
+```{r}
+#| label: load packages
+#| message: false
+#| echo: false
+
+library(survival)
+library(ggsurvfit)
+library(tidyverse)
+library(ggalt)
+library(ggpmisc)
+library(ggpubr)
+library(here)
+```
+
+Imagine the following scenario: we have performed our analysis, produced our Kaplan-Meier (KM) plot, written up our work, finalised and completed the submission.
+
+Then comes a request to publish the same analysis in a different venue, but with the following comments:
+
+> Please can you modify your KM plot to meet the current recommendations of the journal as spelled out by Morris et al. [@Morrise030215] ... and we need the corrected version by tomorrow!!!
+
+Specifically, the request is to reformat the KM plot to mirror the following example to meet the publication criteria.
+
+![](images/kmunicate_plot.jpg){fig-align="center" width="450"}
+
+### Typical approach
+
+This is a common scenario. We may want to use the same analysis in a variety of venues. Each venue may have a different set of requirements, a different audience, and so on. This implicitly means that the output must be reformatted to meet those specifications. For example, a printed publication, a CSR appendix, a shiny app, or an interactive document.
+
+We want to avoid repeating the same analysis by keeping the single source of truth and only reformat it. For example, we may have a new or separate team working on this request. They may not have the context of the analysis, so they try to recreate it with good intent and change specific settings.
+
+Below is a possible scenario where in recreating the analysis, the statistician uses settings in `Surv()` to estimate confidence intervals with the *log-log* method using a *robust* variance estimator. Although an appropriate approach, this deviates from the original statistical analysis plan. This increases the risk of presenting different numbers, creating confusion.
+
+```{r}
+#| label: typical-scenario
+#| fig-height: 5
+#| fig-width: 6
+#| fig-align: center
+
+adtte <- readRDS(here::here("data", "adtte.rds"))
+
+redone_analysis_plot <- survfit2(Surv(AVAL, 1 - CNSR) ~ TRTP,
+  data = adtte,
+  conf.type = "log-log", robust = TRUE
+) |>
+  ggsurvfit(linetype_aes = TRUE) +
+  add_confidence_interval() +
+  add_risktable(
+    risktable_stats = c("n.risk", "cum.censor", "cum.event")
+  ) +
+  theme_ggsurvfit_KMunicate() +
+  scale_y_continuous(limits = c(0, 1)) +
+  scale_x_continuous(expand = c(0.02, 0)) +
+  theme(legend.position = c(0.85, 0.5)) +
+  scale_color_manual(values = c("orange", "blue")) +
+  scale_fill_manual(values = c("orange", "blue")) +
+  xlab("Days since randomization")
+
+redone_analysis_plot
+```
+
+### Instead, how could we proceed?
+
+Think back to the previous exercise.
+
+-   What information have we stored according to the data model?
+-   Can this be computed without re-running the analysis?
+-   Is there any information missing?
+
+Lets inspect the previous tables in the context of this new request.
+
+```{r}
+#| label: instead-load-ard
+
+load(file = here("data", "survival_ard.rda"))
+glimpse(survival_ard)
+```
+
+Do we have all the information we require? **Yes!**
+
+We have the upper and lower confidence limits, the number at risk, number of
+events, and the censoring information.
+
+## Reusing the analysis results
+
+We can continue with updating the plot we made on the previous exercise.
+
+```{r}
+#| label: reuse-ard-plot
+#| code-fold: true
+
+load(file = here("data", "outputs.rda"))
+
+title <- outputs |>
+  filter(type == "title")
+
+xlab <- outputs |>
+  filter(type == "xlab")
+
+ylab <- outputs |>
+  filter(type == "ylab")
+
+legend <- outputs |>
+  filter(type == "legend")
+
+legend_colors <- str_split(legend$color, pattern = ", ", simplify = T) |>
+  str_split(pattern = " = ", simplify = T)
+
+plot_original <-
+  survival_ard |>
+  ggplot(aes(x = time, y = estimate, ymin = ci_lower, ymax = ci_upper)) +
+  geom_step(aes(colour = strata)) +
+  theme(
+    legend.position = legend$location,
+    legend.key = element_rect(fill = "white"),
+    panel.background = element_rect(fill = "white"),
+    panel.grid.major = element_line(
+      linewidth = 0.3, linetype = "solid",
+      colour = "grey"
+    ),
+    panel.grid.minor = element_line(
+      linewidth = 0.1, linetype = "solid",
+      colour = "grey"
+    ),
+    plot.title = element_text(face = title$weight),
+    axis.title.y = element_text(face = ylab$weight),
+    axis.title.x = element_text(face = xlab$weight)
+  ) +
+  expand_limits(x = 0, y = 0) +
+  ylab(ylab$text) +
+  xlab(xlab$text) +
+  ggtitle(title$text) +
+  guides(color = guide_legend(title = legend$text)) +
+  scale_color_manual(
+    limits = legend_colors[, 1],
+    values = legend_colors[, 2]
+  )
+```
+
+### Adding confidence bands
+
+```{r}
+#| label: reuse-ard-ci
+#| fig-height: 5
+#| fig-width: 6
+#| fig-align: center
+
+plot_reformat1 <- plot_original +
+  geom_ribbon(
+    stat = "stepribbon", alpha = 0.2,
+    aes(fill = strata), show.legend = FALSE
+  )
+
+
+plot_reformat1
+```
+
+### Adding the table below the plot
+
+To add the table with information at specific time points we need to calculate
+the cumulative sum for the number of events. This require a bit more code but,
+assuming the use of a data model you can also built functions to perform these
+tasks. 
+
+```{r}
+#| label: add-table
+#| code-fold: true
+
+# Calculate cumulative number of events and censoring. Then, reformat table to
+#  easily extract the respective values at a specific time
+ard_reformatted <- survival_ard |>
+  group_by(strata) |>
+  arrange(time) |>
+  mutate(
+    cum_event = cumsum(n_event),
+    cum_censor = cumsum(n_censor)
+  ) |>
+  ungroup() |>
+  pivot_longer(
+    cols = c("cum_event", "cum_censor", "n_risk"),
+    names_to = "type",
+    values_to = "value"
+  )
+
+# Create a function to extract the number of events and censoring at a
+#  given time
+extract_values <- function(data, time_break, stratum) {
+  times <- data |>
+    filter(strata == stratum) |>
+    pull(time)
+
+  times[which.min(abs(times - time_break))]
+}
+
+# Specify the times of interest
+time_breaks <- c(0, 100, 200, 300)
+
+# Extract values for each strata
+marks_surgical <- map_vec(
+  .x = time_breaks,
+  .f = extract_values,
+  data = ard_reformatted,
+  stratum = "surgical"
+)
+
+marks_medical <- map_vec(
+  .x = time_breaks,
+  .f = extract_values,
+  data = ard_reformatted,
+  stratum = "medical"
+)
+
+# Prepare data to create the tables
+data_surgical <- ard_reformatted |>
+  filter(
+    strata == "surgical",
+    time %in% marks_surgical
+  )
+
+data_medical <- ard_reformatted |>
+  filter(
+    strata == "medical",
+    time %in% marks_medical
+  )
+
+# Create a function to produce the tables
+make_table <- function(data, breaks) {
+  n_types <- length(unique(data$type))
+
+  prep_data <- data |>
+    select(time, type, value) |>
+    arrange(type) |>
+    mutate(time = rep(breaks, n_types)) |>
+    mutate(type = case_when(
+      type == "n_risk" ~ "At risk",
+      type == "cum_event" ~ "Event",
+      type == "cum_censor" ~ "Censored"
+    ))
+  prep_data |>
+    ggplot(aes(x = time, y = type, label = value)) +
+    geom_text(size = 3) +
+    theme_minimal() +
+    scale_x_continuous(minor_breaks = NULL) +
+    theme(
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "none",
+      panel.border = element_blank(),
+      axis.text.x = element_blank(),
+      axis.ticks = element_blank(),
+      plot.margin = unit(c(0.5, 5, 0, 0.5), "cm"),
+      plot.title = element_text(size = 10, face = "bold", hjust = -0.1)
+    ) +
+    xlab(NULL) +
+    ylab(NULL)
+}
+```
+
+Now, we can create the tables that will go below the plot followed by arranging 
+them accordingly.
+
+```{r}
+#| label: make-plot-1
+#| fig-height: 5
+#| fig-width: 6
+#| fig-align: center
+
+# Create tables
+table_medical <- make_table(data_medical, breaks = time_breaks) +
+  ggtitle("Medical")
+
+table_surgical <- make_table(data_surgical, breaks = time_breaks) +
+  ggtitle("Surgical")
+
+# Slight adjustment to more or less align the plot and tables
+plot_reformat2 <- plot_reformat1 +
+  theme(plot.margin = unit(c(0.5, 0, 0.5, 1), "cm"))
+
+requested_plot <- ggarrange(plot_reformat2,
+  table_medical,
+  table_surgical,
+  nrow = 3, heights = c(3, 1, 1)
+)
+
+requested_plot
+```
+
+### An update to the request
+
+An additional request has arrived:
+
+> Great plot. Thanks for your work! But... can you please add the censoring information to the lines instead of having it in the table. I prefer it like 
+that. ASAP please!!!
+
+```{r}
+#| label: reuse-ard-censor
+#| fig-height: 5
+#| fig-width: 6
+#| fig-align: center
+
+# Add the censoring to the lines
+plot_reformat4 <-
+  plot_reformat1 +
+  geom_point(
+    data = filter(survival_ard, n_censor > 0),
+    aes(x = time, y = estimate, color = strata),
+    shape = 3,
+    show.legend = FALSE
+  )
+
+# Remove the censoring information from the tables
+data_medical_upd <- data_medical |>
+  filter(type != "Censored")
+
+data_surgical_upd <- data_surgical |>
+  filter(type != "Censored")
+
+table_medical_upd <- make_table(data_medical_upd, breaks = time_breaks) +
+  ggtitle("Medical")
+
+table_surgical_upd <- make_table(data_surgical_upd, breaks = time_breaks) +
+  ggtitle("Surgical")
+
+# Combine plot and tables
+plot_reformat5 <- plot_reformat4 +
+  theme(plot.margin = unit(c(0.5, 0, 0.5, 1), "cm"))
+
+requested_plot2 <- ggarrange(plot_reformat5,
+  table_medical_upd,
+  table_surgical_upd,
+  nrow = 3, heights = c(3, 1, 1)
+)
+
+requested_plot2
+```
+
+## Additional (take-home) tasks and questions
+
+1. How would you calculate median survival using the ARD?
+
+2. Create a set of functions designed to work with the data following the ARDM.
+For example, one to create an interactive table and another a plot only using the
+stored information.
+
+3. Add additional survival analyses. Can you perform a meta-analysis using the information stored? What is missing?
+

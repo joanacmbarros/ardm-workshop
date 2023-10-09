@@ -1,0 +1,333 @@
+---
+title: "Exercise: Building a data model"
+subtitle: "Onwards to the drawing board"
+title-block-banner: "#1D466C"
+format:
+  html:
+    self-contained: true
+    toc: true
+    toc-location: left
+    citations-hover: true
+    code-copy: true
+    code-fold: show
+    code-block-bg: true
+    code-overflow: wrap
+    highlight-style: github
+    theme: ../custom.scss
+---
+
+```{r}
+#| label: load packages
+#| message: false
+#| echo: false
+
+library(survival)
+library(ggsurvfit)
+library(tidyverse)
+library(ggalt)
+library(here)
+library(dm)
+```
+
+## Task
+
+Starting with the Kaplan-Meier (KM) plot below:
+
+1.  What is the key information to keep?
+
+2.  How would you categorize these items?
+
+3.  How would you structure the data model?
+
+![](images/original_plot.png){fig-align="center" width="543"}
+
+## Initial thoughts
+
+Two pieces of information stand-out:
+
+1.  Plots lines with the KM estimates over time
+
+2.  Title, labels, and a legend
+
+### Survival analysis results
+
+Performing a survival analysis will produce the survival estimates, as
+well as the associated standard error and confidence interval, the
+number of patients at risk, number of events, and censoring at each time
+point. As an analysis can have multiple strata, this information also
+needs to be captured. Ultimately, the goal is to capture all relevant
+information that is part of the survival analysis results.
+
+In addition, since we should be able to store results from multiple
+survival analysis, we add two new fields to allow associating a name and
+id to each analysis.
+
+Adapting this to a table view, the resulting dataset (i.e., the survival
+Analysis Results Dataset) can be similar to the table below. We chose to
+use a long table format since it is more flexible to record information
+and easy to manipulate and reshape.
+
+```{r}
+#| label: survival_ard
+survival_ard <- tibble(
+  name = character(),
+  id = character(),
+  strata = character(),
+  time = numeric(),
+  n_risk = numeric(),
+  n_event = numeric(),
+  n_censor = numeric(),
+  estimate = numeric(),
+  std_error = numeric(),
+  ci_lower = numeric(),
+  ci_upper = numeric()
+)
+
+glimpse(survival_ard)
+```
+
+### Outputs metadata
+
+For the title, labels, and legend, we store the respective strings and
+include related information such as the position of the labels and font
+weight. As before, we add two new fields to allow associating a name and
+id to each output. We call this table *outputs* since it stores
+information regarding the presentation of the analysis results.
+
+```{r}
+#| label: outputs-metadata
+outputs <- tibble(
+  name = character(),
+  id = character(),
+  text = character(),
+  type = character(),
+  location = character(),
+  position = character(),
+  weight = character(),
+  color = character()
+)
+
+glimpse(outputs)
+```
+
+### Analyses metadata
+
+When performing an analysis there is a lot of association information
+such as the parameters utilised, as well as libraries and functions.
+Hence, it is important to keep this information to enable reproducing
+the analysis.
+
+In addition, each analysis should have a link to its results and
+outputs. To enable the linking, the analysis metadata table should
+include a field with the analysis results id and the output id.
+
+A (very) rudimentary suggestion is to store the analysis-related
+information as shown in the table below.
+
+```{r}
+#| label: analyses-metadata
+analyses_metadata <- tibble(
+  name = character(),
+  id = character(),
+  software = character(),
+  software_version = character(),
+  libraries = character(),
+  function_call = character(),
+  ard_id = character(),
+  output_id = character()
+)
+
+glimpse(analyses_metadata)
+```
+
+### Visualise the tables linking
+
+To view how the linking of the tables, we can use a diagram and leverage
+the unique identifies to create primary keys in each table and foreign
+keys in *analyses* tables by referencing the primary key of the
+*surival_ard* and *outputs* tables.
+
+This means that with an analysis identifier we can easily find the
+related analysis results and output metadata.
+
+```{r}
+#| label: dm
+#| message: false
+ardm <- dm(survival_ard, outputs, analyses_metadata) |>
+  dm_add_pk(table = survival_ard, columns = id) |>
+  dm_add_pk(table = outputs, columns = id) |>
+  dm_add_pk(table = analyses_metadata, columns = id) |>
+  dm_add_fk(
+    table = analyses_metadata, columns = ard_id,
+    ref_table = survival_ard, ref_columns = id
+  ) |>
+  dm_add_fk(
+    table = analyses_metadata, columns = output_id,
+    ref_table = outputs, ref_columns = id
+  )
+ardm |> dm_draw(view_type = "all")
+```
+
+### Populating the tables
+
+#### *survival_ard*
+
+To calculate the KM estimates we need the source data, namely the ADTTE
+dataset available in the datasets folder.
+
+```{r}
+#| label: load-data
+adtte <- readRDS(here("data", "adtte.rds"))
+```
+
+Then, we calculate the estimates using {survival} and store the
+information with the names and structure defined earlier. To help
+extracting and tidying up the data, we use `tidy_survfit()` from
+{ggsurvfit}.
+
+```{r}
+#| label: get_estimates
+estimates <- survival::survfit(survival::Surv(time = AVAL, event = 1 - CNSR) ~ TRTP,
+  data = adtte
+)
+
+tidy_estimates <- tidy_survfit(estimates)
+
+survival_ard <- tidy_estimates |>
+  mutate(
+    name = "survival_01",
+    id = "ARD01"
+  ) |>
+  select(
+    name, id, strata, time, n.risk, n.event,
+    n.censor, estimate, std.error, conf.high,
+    conf.low
+  ) |>
+  rename(
+    n_risk = n.risk,
+    n_event = n.event,
+    n_censor = n.censor,
+    std_error = std.error,
+    ci_upper = conf.high,
+    ci_lower = conf.low
+  ) |>
+  mutate(
+    strata = gsub(pattern = "TRTP=", replacement = "", x = strata)
+  )
+
+save(survival_ard, file = here("data", "survival_ard.rda"))
+glimpse(survival_ard)
+```
+
+#### *outputs*
+
+```{r}
+#| label: get_outputs
+outputs <- tibble(
+  name = rep("kmplot_01", 4),
+  id = rep("OUT01", 4),
+  text = c(
+    "Overall survival (simulated CTN03 trial)",
+    "Survival Probability",
+    "Days since randomization",
+    "Treatment"
+  ),
+  type = c("title", "ylab", "xlab", "legend"),
+  location = c("top", NA, NA, "right"),
+  position = c("left", "center", "center", NA),
+  weight = c(rep("bold", 3), NA),
+  color = c(rep("black", 3), "medical = orange, surgical = blue")
+)
+
+save(outputs, file = here("data", "outputs.rda"))
+glimpse(outputs)
+```
+
+#### *analyses*
+
+```{r}
+#| label: fill-analyses
+analyses_metadata <- tibble(
+  name = "survival_analysis_01",
+  id = "A01",
+  software = "R",
+  software_version = "4.2.0",
+  libraries = "survival_3.5-7",
+  function_call = deparse(estimates$call, width.cutoff = 500),
+  ard_id = "ARD01",
+  output_id = "OUT01"
+)
+
+save(analyses_metadata, file = here("data", "analyses_metadata.rda"))
+glimpse(analyses_metadata)
+```
+
+## Recreating the plot
+
+First, we extract the tile, labels, and legend information from
+*output*. Since this is a simple example, the querying process is
+straightforward. In a more complex situation, we would need the analysis
+id to in turn find the respective output id and related information.
+
+```{r}
+#| label: get-labels
+title <- outputs |>
+  filter(type == "title")
+
+xlab <- outputs |>
+  filter(type == "xlab")
+
+ylab <- outputs |>
+  filter(type == "ylab")
+
+legend <- outputs |>
+  filter(type == "legend")
+
+legend_colors <- str_split(legend$color, pattern = ", ", simplify = T) |>
+  str_split(pattern = " = ", simplify = T)
+```
+
+Then, we can use {ggplot2} to build the plot.
+
+```{r}
+#| label: build-plot
+#| fig-height: 5
+#| fig-width: 6
+#| fig-align: center
+survival_ard |>
+  ggplot(aes(x = time, y = estimate, ymin = ci_lower, ymax = ci_upper)) +
+  geom_step(aes(colour = strata)) +
+  theme(
+    legend.position = legend$location,
+    legend.key = element_rect(fill = "white"),
+    panel.background = element_rect(fill = "white"),
+    panel.grid.major = element_line(
+      linewidth = 0.3, linetype = "solid",
+      colour = "grey"
+    ),
+    panel.grid.minor = element_line(
+      linewidth = 0.1, linetype = "solid",
+      colour = "grey"
+    ),
+    plot.title = element_text(face = title$weight),
+    axis.title.y = element_text(face = ylab$weight),
+    axis.title.x = element_text(face = xlab$weight)
+  ) +
+  expand_limits(x = 0, y = 0) +
+  ylab(ylab$text) +
+  xlab(xlab$text) +
+  ggtitle(title$text) +
+  guides(color = guide_legend(title = legend$text)) +
+  scale_color_manual(values = legend_colors[, 2])
+```
+
+## Additional (take-home) tasks and questions
+
+1.  Attempt to create a relation database, using {DBI} and {RSQLite},
+    following this data model.
+
+2.  Include additional survival analysis and outputs. What information
+    is missing and not recorded by this data model?
+
+3.  Expand the analyses table to ensure (as best possible) the analysis
+    reproducibility.
