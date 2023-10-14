@@ -61,7 +61,7 @@ Unfortunately, this data sets does not contain information on the number at risk
 
 ```{r}
 #| label: fill-survival-ard
-#| eval: false
+#| eval: true
 load(file = here("data", "survival_ard.rda"))
 
 sas_ard <- sas_data |>
@@ -91,7 +91,7 @@ This one is more tricky since we do not have much information in the datasets pr
 
 ```{r}
 #| label: fill-analyses-metadata
-#| eval: false
+#| eval: true
 load(file = here("data", "analyses_metadata.rda"))
 
 sas_analyses <- tibble(
@@ -120,7 +120,7 @@ load(file = here("data", "survival_ard.rda"))
 load(file = here("data", "outputs.rda"))
 
 sas_analysis <- analyses_metadata |> 
-  filter(id == "A02")
+  filter(id == "A02") 
 
 sas_output <- outputs |> 
   filter(id == sas_analysis$output_id)
@@ -215,7 +215,7 @@ Take a few minutes to think and discuss about this problem:
 
 * What other information do you think it is relevant to keep about an analysis?
 
-* What if you wanted to store results from other modalities such as genome-wide association studies (GWAS)?
+* What if you wanted to store results from other modalities such as imaging (e.g., x-rays)?
 
 
 ## Additional (take-home) tasks and questions
