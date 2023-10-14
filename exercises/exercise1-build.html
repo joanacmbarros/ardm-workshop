@@ -4304,53 +4304,41 @@ color: #333333;
 <section id="survival-analysis-results" class="level3">
 <h3 class="anchored" data-anchor-id="survival-analysis-results">Survival analysis results</h3>
 <p>Performing a survival analysis will produce the survival estimates, as well as the associated standard error and confidence interval, the number of patients at risk, number of events, and censoring at each time point. As an analysis can have multiple strata, this information also needs to be captured. Ultimately, the goal is to capture all relevant information that is part of the survival analysis results.</p>
-<p>In addition, since we should be able to store results from multiple survival analysis, we add two new fields to allow associating a name and id to each analysis.</p>
+<p>In addition, since we should be able to store results from multiple survival analysis, we add a new fields to allow associating a description and id to each analysis.</p>
 <p>Adapting this to a table view, the resulting dataset (i.e., the survival Analysis Results Dataset) can be similar to the table below. We chose to use a long table format since it is more flexible to record information and easy to manipulate and reshape.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>survival_ard <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">character</span>(),</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">character</span>(),</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">character</span>(),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="fu">character</span>(),</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">strata =</span> <span class="fu">character</span>(),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="fu">numeric</span>(),</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">n_risk =</span> <span class="fu">numeric</span>(),</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">n_event =</span> <span class="fu">numeric</span>(),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">n_censor =</span> <span class="fu">numeric</span>(),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">estimate =</span> <span class="fu">numeric</span>(),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">std_error =</span> <span class="fu">numeric</span>(),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">ci_lower =</span> <span class="fu">numeric</span>(),</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">ci_upper =</span> <span class="fu">numeric</span>()</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(survival_ard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">character</span>(),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">numeric</span>()</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(survival_ard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 0
-Columns: 11
-$ name      &lt;chr&gt; 
-$ id        &lt;chr&gt; 
-$ strata    &lt;chr&gt; 
-$ time      &lt;dbl&gt; 
-$ n_risk    &lt;dbl&gt; 
-$ n_event   &lt;dbl&gt; 
-$ n_censor  &lt;dbl&gt; 
-$ estimate  &lt;dbl&gt; 
-$ std_error &lt;dbl&gt; 
-$ ci_lower  &lt;dbl&gt; 
-$ ci_upper  &lt;dbl&gt; </code></pre>
+Columns: 5
+$ id          &lt;chr&gt; 
+$ description &lt;chr&gt; 
+$ strata      &lt;chr&gt; 
+$ name        &lt;chr&gt; 
+$ value       &lt;dbl&gt; </code></pre>
 </div>
 </div>
 </section>
 <section id="outputs-metadata" class="level3">
 <h3 class="anchored" data-anchor-id="outputs-metadata">Outputs metadata</h3>
-<p>For the title, labels, and legend, we store the respective strings and include related information such as the position of the labels and font weight. As before, we add two new fields to allow associating a name and id to each output. We call this table <em>outputs</em> since it stores information regarding the presentation of the analysis results.</p>
+<p>For the title, labels, and legend, we store the respective strings and include related information such as the position of the labels and font weight. As before, we add two new fields to allow associating a description and id to each output. We call this table <em>outputs</em> since it stores information regarding the presentation of the analysis results.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>outputs <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">character</span>(),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">character</span>(),</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">character</span>(),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="fu">character</span>(),</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">text =</span> <span class="fu">character</span>(),</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">character</span>(),</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">location =</span> <span class="fu">character</span>(),</span>
@@ -4364,14 +4352,14 @@ $ ci_upper  &lt;dbl&gt; </code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 0
 Columns: 8
-$ name     &lt;chr&gt; 
-$ id       &lt;chr&gt; 
-$ text     &lt;chr&gt; 
-$ type     &lt;chr&gt; 
-$ location &lt;chr&gt; 
-$ position &lt;chr&gt; 
-$ weight   &lt;chr&gt; 
-$ color    &lt;chr&gt; </code></pre>
+$ id          &lt;chr&gt; 
+$ description &lt;chr&gt; 
+$ text        &lt;chr&gt; 
+$ type        &lt;chr&gt; 
+$ location    &lt;chr&gt; 
+$ position    &lt;chr&gt; 
+$ weight      &lt;chr&gt; 
+$ color       &lt;chr&gt; </code></pre>
 </div>
 </div>
 </section>
@@ -4384,8 +4372,8 @@ $ color    &lt;chr&gt; </code></pre>
 <details open>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>analyses_metadata <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">character</span>(),</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">character</span>(),</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">character</span>(),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="fu">character</span>(),</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">software =</span> <span class="fu">character</span>(),</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">software_version =</span> <span class="fu">character</span>(),</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">libraries =</span> <span class="fu">character</span>(),</span>
@@ -4399,8 +4387,8 @@ $ color    &lt;chr&gt; </code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 0
 Columns: 8
-$ name             &lt;chr&gt; 
 $ id               &lt;chr&gt; 
+$ description      &lt;chr&gt; 
 $ software         &lt;chr&gt; 
 $ software_version &lt;chr&gt; 
 $ libraries        &lt;chr&gt; 
@@ -4433,8 +4421,8 @@ $ output_id        &lt;chr&gt; </code></pre>
 </details>
 <div class="cell-output-display">
 
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-29d41e28ae50703daf64" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-29d41e28ae50703daf64">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=LR tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\npack=true\npackmode= \"node\"\n\n  \"analyses_metadata\" [id = \"analyses_metadata\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">analyses_metadata<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">name<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software_version<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">libraries<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">function_call<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"ard_id\">ard_id<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"output_id\">output_id<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"outputs\" [id = \"outputs\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">outputs<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">name<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">text<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">type<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">location<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">position<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">weight<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">color<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"survival_ard\" [id = \"survival_ard\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">survival_ard<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">name<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">strata<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">time<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">n_risk<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">n_event<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">n_censor<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">estimate<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">std_error<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">ci_lower<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">ci_upper<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"analyses_metadata\":\"ard_id\"->\"survival_ard\":\"id\" [id=\"analyses_metadata_1\"]\n\"analyses_metadata\":\"output_id\"->\"outputs\":\"id\" [id=\"analyses_metadata_2\"]\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-7bca2c8581459ffd84ef" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-7bca2c8581459ffd84ef">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=LR tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\npack=true\npackmode= \"node\"\n\n  \"analyses_metadata\" [id = \"analyses_metadata\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">analyses_metadata<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software_version<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">libraries<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">function_call<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"ard_id\">ard_id<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"output_id\">output_id<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"outputs\" [id = \"outputs\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">outputs<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">text<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">type<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">location<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">position<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">weight<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">color<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"survival_ard\" [id = \"survival_ard\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">survival_ard<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">strata<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">name<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">value<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"analyses_metadata\":\"ard_id\"->\"survival_ard\":\"id\" [id=\"analyses_metadata_1\"]\n\"analyses_metadata\":\"output_id\"->\"outputs\":\"id\" [id=\"analyses_metadata_2\"]\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -4461,11 +4449,11 @@ $ output_id        &lt;chr&gt; </code></pre>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>survival_ard <span class="ot">&lt;-</span> tidy_estimates <span class="sc">|&gt;</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">&quot;survival_01&quot;</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">description =</span> <span class="st">&quot;survival 01&quot;</span>,</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">&quot;ARD01&quot;</span></span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    name, id, strata, time, n.risk, n.event,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    id, description, strata, time, n.risk, n.event,</span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    n.censor, estimate, std.error, conf.high,</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    conf.low</span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
@@ -4479,25 +4467,22 @@ $ output_id        &lt;chr&gt; </code></pre>
 <span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">strata =</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;TRTP=&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;&quot;</span>, <span class="at">x =</span> strata)</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(survival_ard, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;survival_ard.rda&quot;</span>))</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(survival_ard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">!</span><span class="fu">c</span>(<span class="st">&quot;description&quot;</span>, <span class="st">&quot;id&quot;</span>, <span class="st">&quot;strata&quot;</span>), </span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;name&quot;</span>, </span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;value&quot;</span>)</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(survival_ard, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;survival_ard.rds&quot;</span>))</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(survival_ard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 198
-Columns: 11
-$ name      &lt;chr&gt; &quot;survival_01&quot;, &quot;survival_01&quot;, &quot;survival_01&quot;, &quot;survival_01&quot;, …
-$ id        &lt;chr&gt; &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01…
-$ strata    &lt;chr&gt; &quot;medical&quot;, &quot;medical&quot;, &quot;medical&quot;, &quot;medical&quot;, &quot;medical&quot;, &quot;medi…
-$ time      &lt;dbl&gt; 0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, …
-$ n_risk    &lt;dbl&gt; 500, 500, 476, 470, 463, 454, 451, 450, 448, 443, 441, 440, …
-$ n_event   &lt;dbl&gt; 0, 24, 6, 7, 9, 3, 1, 2, 5, 2, 1, 5, 2, 2, 2, 1, 3, 0, 1, 4,…
-$ n_censor  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …
-$ estimate  &lt;dbl&gt; 1.0000000, 0.9520000, 0.9400000, 0.9260000, 0.9080000, 0.902…
-$ std_error &lt;dbl&gt; 0.00000000, 0.01004193, 0.01129865, 0.01264228, 0.01423528, …
-$ ci_upper  &lt;dbl&gt; 1.0000000, 0.9709227, 0.9610485, 0.9492314, 0.9336905, 0.928…
-$ ci_lower  &lt;dbl&gt; 1.0000000, 0.9334461, 0.9194125, 0.9033371, 0.8830164, 0.876…</code></pre>
+<pre><code>Rows: 1,584
+Columns: 5
+$ id          &lt;chr&gt; &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD01&quot;, &quot;ARD…
+$ description &lt;chr&gt; &quot;survival 01&quot;, &quot;survival 01&quot;, &quot;survival 01&quot;, &quot;survival 01&quot;…
+$ strata      &lt;chr&gt; &quot;medical&quot;, &quot;medical&quot;, &quot;medical&quot;, &quot;medical&quot;, &quot;medical&quot;, &quot;me…
+$ name        &lt;chr&gt; &quot;time&quot;, &quot;n_risk&quot;, &quot;n_event&quot;, &quot;n_censor&quot;, &quot;estimate&quot;, &quot;std_…
+$ value       &lt;dbl&gt; 0.00000000, 500.00000000, 0.00000000, 0.00000000, 1.000000…</code></pre>
 </div>
 </div>
 </section>
@@ -4507,7 +4492,7 @@ $ ci_lower  &lt;dbl&gt; 1.0000000, 0.9334461, 0.9194125, 0.9033371, 0.8830164, 0
 <details open>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>outputs <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">rep</span>(<span class="st">&quot;kmplot_01&quot;</span>, <span class="dv">4</span>),</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="fu">rep</span>(<span class="st">&quot;KM plot 01&quot;</span>, <span class="dv">4</span>),</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">rep</span>(<span class="st">&quot;OUT01&quot;</span>, <span class="dv">4</span>),</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">text =</span> <span class="fu">c</span>(</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Overall survival (simulated CTN03 trial)&quot;</span>,</span>
@@ -4522,20 +4507,20 @@ $ ci_lower  &lt;dbl&gt; 1.0000000, 0.9334461, 0.9194125, 0.9033371, 0.8830164, 0
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;black&quot;</span>, <span class="dv">3</span>), <span class="st">&quot;medical = orange, surgical = blue&quot;</span>)</span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(outputs, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;outputs.rda&quot;</span>))</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(outputs, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;outputs.rds&quot;</span>))</span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(outputs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 4
 Columns: 8
-$ name     &lt;chr&gt; &quot;kmplot_01&quot;, &quot;kmplot_01&quot;, &quot;kmplot_01&quot;, &quot;kmplot_01&quot;
-$ id       &lt;chr&gt; &quot;OUT01&quot;, &quot;OUT01&quot;, &quot;OUT01&quot;, &quot;OUT01&quot;
-$ text     &lt;chr&gt; &quot;Overall survival (simulated CTN03 trial)&quot;, &quot;Survival Probabi…
-$ type     &lt;chr&gt; &quot;title&quot;, &quot;ylab&quot;, &quot;xlab&quot;, &quot;legend&quot;
-$ location &lt;chr&gt; &quot;top&quot;, NA, NA, &quot;right&quot;
-$ position &lt;chr&gt; &quot;left&quot;, &quot;center&quot;, &quot;center&quot;, NA
-$ weight   &lt;chr&gt; &quot;bold&quot;, &quot;bold&quot;, &quot;bold&quot;, NA
-$ color    &lt;chr&gt; &quot;black&quot;, &quot;black&quot;, &quot;black&quot;, &quot;medical = orange, surgical = blue&quot;</code></pre>
+$ description &lt;chr&gt; &quot;KM plot 01&quot;, &quot;KM plot 01&quot;, &quot;KM plot 01&quot;, &quot;KM plot 01&quot;
+$ id          &lt;chr&gt; &quot;OUT01&quot;, &quot;OUT01&quot;, &quot;OUT01&quot;, &quot;OUT01&quot;
+$ text        &lt;chr&gt; &quot;Overall survival (simulated CTN03 trial)&quot;, &quot;Survival Prob…
+$ type        &lt;chr&gt; &quot;title&quot;, &quot;ylab&quot;, &quot;xlab&quot;, &quot;legend&quot;
+$ location    &lt;chr&gt; &quot;top&quot;, NA, NA, &quot;right&quot;
+$ position    &lt;chr&gt; &quot;left&quot;, &quot;center&quot;, &quot;center&quot;, NA
+$ weight      &lt;chr&gt; &quot;bold&quot;, &quot;bold&quot;, &quot;bold&quot;, NA
+$ color       &lt;chr&gt; &quot;black&quot;, &quot;black&quot;, &quot;black&quot;, &quot;medical = orange, surgical = b…</code></pre>
 </div>
 </div>
 </section>
@@ -4545,26 +4530,26 @@ $ color    &lt;chr&gt; &quot;black&quot;, &quot;black&quot;, &quot;black&quot;, 
 <details open>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>analyses_metadata <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;survival_analysis_01&quot;</span>,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="st">&quot;A01&quot;</span>,</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="st">&quot;A01&quot;</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">&quot;survival analysis 01&quot;</span>,</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">software =</span> <span class="st">&quot;R&quot;</span>,</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">software_version =</span> <span class="st">&quot;4.2.0&quot;</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">software_version =</span> <span class="st">&quot;4.3.1&quot;</span>,</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">libraries =</span> <span class="st">&quot;survival_3.5-7&quot;</span>,</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">function_call =</span> <span class="fu">deparse</span>(estimates<span class="sc">$</span>call, <span class="at">width.cutoff =</span> <span class="dv">500</span>),</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">ard_id =</span> <span class="st">&quot;ARD01&quot;</span>,</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_id =</span> <span class="st">&quot;OUT01&quot;</span></span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(analyses_metadata, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;analyses_metadata.rda&quot;</span>))</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(analyses_metadata, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;analyses_metadata.rds&quot;</span>))</span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(analyses_metadata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1
 Columns: 8
-$ name             &lt;chr&gt; &quot;survival_analysis_01&quot;
 $ id               &lt;chr&gt; &quot;A01&quot;
+$ description      &lt;chr&gt; &quot;survival analysis 01&quot;
 $ software         &lt;chr&gt; &quot;R&quot;
-$ software_version &lt;chr&gt; &quot;4.2.0&quot;
+$ software_version &lt;chr&gt; &quot;4.3.1&quot;
 $ libraries        &lt;chr&gt; &quot;survival_3.5-7&quot;
 $ function_call    &lt;chr&gt; &quot;survfit(formula = survival::Surv(time = AVAL, event …
 $ ard_id           &lt;chr&gt; &quot;ARD01&quot;
@@ -4596,35 +4581,41 @@ $ output_id        &lt;chr&gt; &quot;OUT01&quot;</code></pre>
 <span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_split</span>(<span class="at">pattern =</span> <span class="st">&quot; = &quot;</span>, <span class="at">simplify =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Then, we can use {ggplot2} to build the plot.</p>
+<p>Then, we can use {ggplot2} to build the plot. Since the data is stored in a long format we first need to manipulate it to a {ggplot2} friendlier format.</p>
 <div class="cell" data-layout-align="center">
 <details open>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>survival_ard <span class="sc">|&gt;</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> estimate, <span class="at">ymin =</span> ci_lower, <span class="at">ymax =</span> ci_upper)) <span class="sc">+</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">colour =</span> strata)) <span class="sc">+</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> legend<span class="sc">$</span>location,</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.key =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>),</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>),</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">linewidth =</span> <span class="fl">0.3</span>, <span class="at">linetype =</span> <span class="st">&quot;solid&quot;</span>,</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="st">&quot;grey&quot;</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">linewidth =</span> <span class="fl">0.1</span>, <span class="at">linetype =</span> <span class="st">&quot;solid&quot;</span>,</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="st">&quot;grey&quot;</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> title<span class="sc">$</span>weight),</span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> ylab<span class="sc">$</span>weight),</span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">face =</span> xlab<span class="sc">$</span>weight)</span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_limits</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(ylab<span class="sc">$</span>text) <span class="sc">+</span></span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(xlab<span class="sc">$</span>text) <span class="sc">+</span></span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(title<span class="sc">$</span>text) <span class="sc">+</span></span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> legend<span class="sc">$</span>text)) <span class="sc">+</span></span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> legend_colors[, <span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>widen_survival_ard <span class="ot">&lt;-</span> survival_ard <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&quot;name&quot;</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="st">&quot;value&quot;</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_fn =</span> list) <span class="sc">|&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">everything</span>())</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>widen_survival_ard <span class="sc">|&gt;</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> estimate, <span class="at">ymin =</span> ci_lower, <span class="at">ymax =</span> ci_upper)) <span class="sc">+</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">colour =</span> strata)) <span class="sc">+</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> legend<span class="sc">$</span>location,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.key =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>),</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>),</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">linewidth =</span> <span class="fl">0.3</span>, <span class="at">linetype =</span> <span class="st">&quot;solid&quot;</span>,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="st">&quot;grey&quot;</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">linewidth =</span> <span class="fl">0.1</span>, <span class="at">linetype =</span> <span class="st">&quot;solid&quot;</span>,</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="st">&quot;grey&quot;</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> title<span class="sc">$</span>weight),</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> ylab<span class="sc">$</span>weight),</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">face =</span> xlab<span class="sc">$</span>weight)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_limits</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(ylab<span class="sc">$</span>text) <span class="sc">+</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(xlab<span class="sc">$</span>text) <span class="sc">+</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(title<span class="sc">$</span>text) <span class="sc">+</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> legend<span class="sc">$</span>text)) <span class="sc">+</span></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> legend_colors[, <span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">

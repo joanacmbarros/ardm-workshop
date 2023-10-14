@@ -62,10 +62,16 @@ Unfortunately, this data sets does not contain information on the number at risk
 ```{r}
 #| label: fill-survival-ard
 #| eval: true
-load(file = here("data", "survival_ard.rda"))
+survival_ard <- readRDS(file = here("data", "survival_ard.rds"))
+
+widen_survival_ard <- survival_ard |>
+  pivot_wider(names_from = "name",
+              values_from = "value",
+              values_fn = list) |>
+  unnest(cols = everything())
 
 sas_ard <- sas_data |>
-  mutate(name = "sas_survival_01",
+  mutate(description = "sas survival 01",
          id = "ARD02") |>
   rename(
     strata = TRTP,
@@ -78,11 +84,15 @@ sas_ard <- sas_data |>
   )  |>
   mutate(n_risk = NA,
          n_event = NA) |> 
-  select(-STRATUM, names(survival_ard))
+  select(-STRATUM) |>
+  pivot_longer(cols = !c("description", "id", "strata"), 
+               names_to = "name", 
+               values_to = "value") |>
+  select(names(survival_ard))
 
 
-survival_ard <- rbind(survival_ard, sas_ard)
-save(survival_ard, file = here("data", "survival_ard.rda"))
+new_survival_ard <- rbind(survival_ard, sas_ard)
+saveRDS(new_survival_ard, file = here("data", "survival_ard.rds"))
 ```
 
 ### Fill the `analyses_metadata` table
@@ -92,10 +102,10 @@ This one is more tricky since we do not have much information in the datasets pr
 ```{r}
 #| label: fill-analyses-metadata
 #| eval: true
-load(file = here("data", "analyses_metadata.rda"))
+analyses_metadata <- readRDS(file = here("data", "analyses_metadata.rds"))
 
 sas_analyses <- tibble(
-  name = "sas_survival_analysis_01",
+  description = "sas survival analysis 01",
   id = "A02",
   software = "SAS",
   software_version = NA,
@@ -105,8 +115,8 @@ sas_analyses <- tibble(
   output_id = "OUT01"
 )
 
-analyses_metadata <- rbind(analyses_metadata, sas_analyses)
-save(analyses_metadata, file = here("data", "analyses_metadata.rda"))
+new_analyses_metadata <- rbind(analyses_metadata, sas_analyses)
+saveRDS(new_analyses_metadata, file = here("data", "analyses_metadata.rds"))
 ```
 
 ### Reproducing the plot
@@ -115,9 +125,9 @@ We can now reproduce the plot using the code from exercise 1 using the data in *
 
 ```{r}
 #| label: get-data
-load(file = here("data", "analyses_metadata.rda"))
-load(file = here("data", "survival_ard.rda"))
-load(file = here("data", "outputs.rda"))
+analyses_metadata <- readRDS(file = here("data", "analyses_metadata.rds"))
+survival_ard <- readRDS(file = here("data", "survival_ard.rds"))
+outputs <- readRDS(file = here("data", "outputs.rds"))
 
 sas_analysis <- analyses_metadata |> 
   filter(id == "A02") 
@@ -155,8 +165,15 @@ legend_colors <- str_split(legend$color, pattern = ", ", simplify = T) |>
 #| fig-height: 5
 #| fig-width: 6
 #| fig-align: center
+
+widen_survival_ard <- survival_ard |>
+  pivot_wider(names_from = "name",
+              values_from = "value",
+              values_fn = list) |>
+  unnest(cols = everything())
+
 plot_original <-
-  sas_surv_ard |>
+  widen_survival_ard |>
   ggplot(aes(x = time, y = estimate, ymin = ci_lower, ymax = ci_upper)) +
   geom_step(aes(colour = strata)) +
   theme(
