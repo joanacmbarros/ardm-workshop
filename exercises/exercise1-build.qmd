@@ -1,5 +1,5 @@
 ---
-title: "Exercise: Building a data model"
+title: "Exercise 1: Building a data model"
 subtitle: "Onwards to the drawing board"
 title-block-banner: "#1D466C"
 format:
