@@ -1,5 +1,5 @@
 ---
-title: "Exercise: Building a data model"
+title: "Exercise 1: Building a data model"
 subtitle: "Onwards to the drawing board"
 title-block-banner: "#1D466C"
 format:
@@ -59,7 +59,7 @@ needs to be captured. Ultimately, the goal is to capture all relevant
 information that is part of the survival analysis results.
 
 In addition, since we should be able to store results from multiple
-survival analysis, we add two new fields to allow associating a name and
+survival analysis, we add a new fields to allow associating a description and
 id to each analysis.
 
 Adapting this to a table view, the resulting dataset (i.e., the survival
@@ -70,17 +70,11 @@ and easy to manipulate and reshape.
 ```{r}
 #| label: survival_ard
 survival_ard <- tibble(
-  name = character(),
   id = character(),
+  description = character(),
   strata = character(),
-  time = numeric(),
-  n_risk = numeric(),
-  n_event = numeric(),
-  n_censor = numeric(),
-  estimate = numeric(),
-  std_error = numeric(),
-  ci_lower = numeric(),
-  ci_upper = numeric()
+  name = character(),
+  value = numeric()
 )
 
 glimpse(survival_ard)
@@ -90,15 +84,15 @@ glimpse(survival_ard)
 
 For the title, labels, and legend, we store the respective strings and
 include related information such as the position of the labels and font
-weight. As before, we add two new fields to allow associating a name and
+weight. As before, we add two new fields to allow associating a description and
 id to each output. We call this table *outputs* since it stores
 information regarding the presentation of the analysis results.
 
 ```{r}
 #| label: outputs-metadata
 outputs <- tibble(
-  name = character(),
   id = character(),
+  description = character(),
   text = character(),
   type = character(),
   location = character(),
@@ -127,8 +121,8 @@ information as shown in the table below.
 ```{r}
 #| label: analyses-metadata
 analyses_metadata <- tibble(
-  name = character(),
   id = character(),
+  description = character(),
   software = character(),
   software_version = character(),
   libraries = character(),
@@ -195,11 +189,11 @@ tidy_estimates <- tidy_survfit(estimates)
 
 survival_ard <- tidy_estimates |>
   mutate(
-    name = "survival_01",
+    description = "survival 01",
     id = "ARD01"
   ) |>
   select(
-    name, id, strata, time, n.risk, n.event,
+    id, description, strata, time, n.risk, n.event,
     n.censor, estimate, std.error, conf.high,
     conf.low
   ) |>
@@ -213,9 +207,12 @@ survival_ard <- tidy_estimates |>
   ) |>
   mutate(
     strata = gsub(pattern = "TRTP=", replacement = "", x = strata)
-  )
+  ) |>
+  pivot_longer(cols = !c("description", "id", "strata"), 
+               names_to = "name", 
+               values_to = "value")
 
-save(survival_ard, file = here("data", "survival_ard.rda"))
+saveRDS(survival_ard, file = here("data", "survival_ard.rds"))
 glimpse(survival_ard)
 ```
 
@@ -224,7 +221,7 @@ glimpse(survival_ard)
 ```{r}
 #| label: get_outputs
 outputs <- tibble(
-  name = rep("kmplot_01", 4),
+  description = rep("KM plot 01", 4),
   id = rep("OUT01", 4),
   text = c(
     "Overall survival (simulated CTN03 trial)",
@@ -239,7 +236,7 @@ outputs <- tibble(
   color = c(rep("black", 3), "medical = orange, surgical = blue")
 )
 
-save(outputs, file = here("data", "outputs.rda"))
+saveRDS(outputs, file = here("data", "outputs.rds"))
 glimpse(outputs)
 ```
 
@@ -248,17 +245,17 @@ glimpse(outputs)
 ```{r}
 #| label: fill-analyses
 analyses_metadata <- tibble(
-  name = "survival_analysis_01",
   id = "A01",
+  description = "survival analysis 01",
   software = "R",
-  software_version = "4.2.0",
+  software_version = "4.3.1",
   libraries = "survival_3.5-7",
   function_call = deparse(estimates$call, width.cutoff = 500),
   ard_id = "ARD01",
   output_id = "OUT01"
 )
 
-save(analyses_metadata, file = here("data", "analyses_metadata.rda"))
+saveRDS(analyses_metadata, file = here("data", "analyses_metadata.rds"))
 glimpse(analyses_metadata)
 ```
 
@@ -287,14 +284,22 @@ legend_colors <- str_split(legend$color, pattern = ", ", simplify = T) |>
   str_split(pattern = " = ", simplify = T)
 ```
 
-Then, we can use {ggplot2} to build the plot.
+Then, we can use {ggplot2} to build the plot. Since the data is stored in a
+long format we first need to manipulate it to a {ggplot2} friendlier format.
 
 ```{r}
 #| label: build-plot
 #| fig-height: 5
 #| fig-width: 6
 #| fig-align: center
-survival_ard |>
+
+widen_survival_ard <- survival_ard |>
+  pivot_wider(names_from = "name",
+              values_from = "value",
+              values_fn = list) |>
+  unnest(cols = everything())
+
+widen_survival_ard |>
   ggplot(aes(x = time, y = estimate, ymin = ci_lower, ymax = ci_upper)) +
   geom_step(aes(colour = strata)) +
   theme(

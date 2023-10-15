@@ -94,7 +94,7 @@ Lets inspect the previous tables in the context of this new request.
 ```{r}
 #| label: instead-load-ard
 
-load(file = here("data", "survival_ard.rda"))
+survival_ard <- readRDS(file = here("data", "survival_ard.rds"))
 glimpse(survival_ard)
 ```
 
@@ -111,7 +111,7 @@ We can continue with updating the plot we made on the previous exercise.
 #| label: reuse-ard-plot
 #| code-fold: true
 
-load(file = here("data", "outputs.rda"))
+outputs <- readRDS(file = here("data", "outputs.rds"))
 
 title <- outputs |>
   filter(type == "title")
@@ -128,8 +128,15 @@ legend <- outputs |>
 legend_colors <- str_split(legend$color, pattern = ", ", simplify = T) |>
   str_split(pattern = " = ", simplify = T)
 
+
+widen_survival_ard <- survival_ard |>
+  pivot_wider(names_from = "name",
+              values_from = "value",
+              values_fn = list) |>
+  unnest(cols = everything())
+
 plot_original <-
-  survival_ard |>
+  widen_survival_ard |>
   ggplot(aes(x = time, y = estimate, ymin = ci_lower, ymax = ci_upper)) +
   geom_step(aes(colour = strata)) +
   theme(
@@ -190,7 +197,7 @@ tasks.
 
 # Calculate cumulative number of events and censoring. Then, reformat table to
 #  easily extract the respective values at a specific time
-ard_reformatted <- survival_ard |>
+ard_reformatted <- widen_survival_ard |>
   group_by(strata) |>
   arrange(time) |>
   mutate(
@@ -324,7 +331,7 @@ that. ASAP please!!!
 plot_reformat4 <-
   plot_reformat1 +
   geom_point(
-    data = filter(survival_ard, n_censor > 0),
+    data = filter(widen_survival_ard, n_censor > 0),
     aes(x = time, y = estimate, color = strata),
     shape = 3,
     show.legend = FALSE
