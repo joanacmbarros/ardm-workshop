@@ -1,5 +1,5 @@
 ---
-title: "Exercise: Testing the model's interoperability"
+title: "Exercise 3: Testing the model's interoperability"
 subtitle: "I hope you like rollercosters"
 title-block-banner: "#1D466C"
 format:
