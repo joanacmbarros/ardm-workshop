@@ -339,10 +339,10 @@ plot_reformat4 <-
 
 # Remove the censoring information from the tables
 data_medical_upd <- data_medical |>
-  filter(type != "Censored")
+  filter(type != "cum_censor")
 
-data_surgical_upd <- data_surgical |>
-  filter(type != "Censored")
+data_surgical_upd <- data_surgical  |>
+  filter(type != "cum_censor")
 
 table_medical_upd <- make_table(data_medical_upd, breaks = time_breaks) +
   ggtitle("Medical")

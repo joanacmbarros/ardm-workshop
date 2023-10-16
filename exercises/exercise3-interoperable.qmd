@@ -31,7 +31,7 @@ library(haven)
 
 Image the same person from exercise 2 comes back with a new finding and a new request:
 
-> I just found the SAS results dataset corresponding to the analysis you did before! It was stored in a no-so-ideally-named folder and, unfortunately, I could not find the corresponding script to recreate the analysis. Please, plot these results and compare to your previous KM plots to confirm the results match.
+> I just found the SAS results dataset corresponding to the analysis you did before! It was stored in a not-so-ideally-named folder and, unfortunately, I could not find the corresponding script to recreate the analysis. Please, plot these results and compare to your previous KM plots to confirm the results match.
 
 To ensure these results are not lost again and to test the robustness of our model, we will add the SAS results to our tables . Then, we can apply the same code from exercise 1 to recreate the Kaplan-Meier plot.
 
