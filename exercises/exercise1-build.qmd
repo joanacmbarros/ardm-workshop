@@ -21,6 +21,12 @@ format:
 #| message: false
 #| echo: false
 
+# Add missing dependencies for renv
+library(markdown)
+library(rmarkdown)
+library(quarto)
+library(DiagrammeR)
+
 library(survival)
 library(ggsurvfit)
 library(tidyverse)
