@@ -21,6 +21,12 @@ format:
 #| message: false
 #| echo: false
 
+# Add missing dependencies for renv
+library(markdown)
+library(rmarkdown)
+library(quarto)
+library(DiagrammeR)
+
 library(survival)
 library(ggsurvfit)
 library(tidyverse)
@@ -85,7 +91,7 @@ glimpse(survival_ard)
 For the title, labels, and legend, we store the respective strings and
 include related information such as the position of the labels and font
 weight. As before, we add two new fields to allow associating a description and
-id to each output. We call this table *outputs* since it stores
+id to each output. We call this table `outputs` since it stores
 information regarding the presentation of the analysis results.
 
 ```{r}
@@ -136,10 +142,10 @@ glimpse(analyses_metadata)
 
 ### Visualise the tables linking
 
-To view how the linking of the tables, we can use a diagram and leverage
-the unique identifies to create primary keys in each table and foreign
-keys in *analyses* tables by referencing the primary key of the
-*surival_ard* and *outputs* tables.
+To view how the linking of the tables works, we can use a diagram and leverage
+the unique identifiers to create primary keys in each table and foreign
+keys in `analyses_metadata` tables by referencing the primary key of the
+`surival_ard` and `outputs` tables.
 
 This means that with an analysis identifier we can easily find the
 related analysis results and output metadata.
@@ -164,7 +170,7 @@ ardm |> dm_draw(view_type = "all")
 
 ### Populating the tables
 
-#### *survival_ard*
+#### `survival_ard`
 
 To calculate the KM estimates we need the source data, namely the ADTTE
 dataset available in the datasets folder.
@@ -216,7 +222,7 @@ saveRDS(survival_ard, file = here("data", "survival_ard.rds"))
 glimpse(survival_ard)
 ```
 
-#### *outputs*
+#### `outputs`
 
 ```{r}
 #| label: get_outputs
@@ -240,7 +246,7 @@ saveRDS(outputs, file = here("data", "outputs.rds"))
 glimpse(outputs)
 ```
 
-#### *analyses*
+#### `analyses_metadata`
 
 ```{r}
 #| label: fill-analyses
@@ -261,8 +267,8 @@ glimpse(analyses_metadata)
 
 ## Recreating the plot
 
-First, we extract the tile, labels, and legend information from
-*output*. Since this is a simple example, the querying process is
+First, we extract the title, labels, and legend information from
+`outputs`. Since this is a simple example, the querying process is
 straightforward. In a more complex situation, we would need the analysis
 id to in turn find the respective output id and related information.
 
@@ -328,7 +334,7 @@ widen_survival_ard |>
 
 ## Additional (take-home) tasks and questions
 
-1.  Attempt to create a relation database, using {DBI} and {RSQLite},
+1.  Attempt to create a relational database, using {DBI} and {RSQLite},
     following this data model.
 
 2.  Include additional survival analysis and outputs. What information

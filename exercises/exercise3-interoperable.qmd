@@ -29,11 +29,11 @@ library(haven)
 
 ## Scenario
 
-Image the same person from exercise 2 comes back with a new finding and a new request:
+Imagine the same person from exercise 2 comes back with a new finding and a new request:
 
 > I just found the SAS results dataset corresponding to the analysis you did before! It was stored in a not-so-ideally-named folder and, unfortunately, I could not find the corresponding script to recreate the analysis. Please, plot these results and compare to your previous KM plots to confirm the results match.
 
-To ensure these results are not lost again and to test the robustness of our model, we will add the SAS results to our tables . Then, we can apply the same code from exercise 1 to recreate the Kaplan-Meier plot.
+To ensure these results are not lost again and to test the robustness of our model, we will add the SAS results to our tables. Then, we can apply the same code from exercise 1 to recreate the Kaplan-Meier plot.
 
 ## Explore the data
 
@@ -57,7 +57,7 @@ Now, we can check our data model and verify if we have all the information neede
 
 ### Fill the `survival_ard` table
 
-Unfortunately, this data sets does not contain information on the number at risk and number of event. However, we can fill the `survival_ard` table with the available information. Next, we can fill the `analyses_metadata` table.
+Unfortunately, this dataset does not contain information on the number at risk and number of events. However, we can fill the `survival_ard` table with the available information. Next, we can fill the `analyses_metadata` table.
 
 ```{r}
 #| label: fill-survival-ard
@@ -97,7 +97,7 @@ saveRDS(new_survival_ard, file = here("data", "survival_ard.rds"))
 
 ### Fill the `analyses_metadata` table
 
-This one is more tricky since we do not have much information in the datasets provided. All we know is the name of the procedure and the software used. As output_id we will use the same as in exercise 1 and 2.
+This one is more tricky since we do not have much information in the datasets provided. All we know is the name of the procedure and the software used. As `output_id` we will use the same as in exercise 1 and 2.
 
 ```{r}
 #| label: fill-analyses-metadata
@@ -121,7 +121,7 @@ saveRDS(new_analyses_metadata, file = here("data", "analyses_metadata.rds"))
 
 ### Reproducing the plot
 
-We can now reproduce the plot using the code from exercise 1 using the data in *survival_ard* and *outputs*.
+We can now reproduce the plot using the code from exercise 1 using the data in `survival_ard` and `outputs`.
 
 ```{r}
 #| label: get-data
@@ -237,6 +237,6 @@ Take a few minutes to think and discuss about this problem:
 
 ## Additional (take-home) tasks and questions
 
-1.  You were just given another SAS dataset complementing the previous one (*survival_ard_part2.sas7bdat* in /data). This new dataset also includes the number at risk and number of events information. How would edit the *survival_ard* analysis A02 to add this information?
+1.  You were just given another SAS dataset complementing the previous one (`survival_ard_part2.sas7bdat` in /data). This new dataset also includes the number at risk and number of events information. How would edit the `survival_ard` analysis A02 to add this information?
 
 2.  Try to do the same exercise using a survival analysis output from another language you are familiar with. Are we missing important information?
