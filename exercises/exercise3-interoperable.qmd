@@ -166,7 +166,7 @@ legend_colors <- str_split(legend$color, pattern = ", ", simplify = T) |>
 #| fig-width: 6
 #| fig-align: center
 
-widen_survival_ard <- survival_ard |>
+widen_survival_ard <- sas_surv_ard |>
   pivot_wider(names_from = "name",
               values_from = "value",
               values_fn = list) |>
@@ -207,7 +207,7 @@ plot_original
 
 #### Comparing plots
 
-When looking at both plots, it seems there are differences in the curves. For example, between days 0-50.
+When looking at both plots, it seems there are differences in the curves. For example, between days 0-100.
 
 ::: {#fig-compare layout-ncol="2"}
 ![Kaplan-Meier plot using A01 (R) results data.](images/original_plot.png){#fig-r width="572"}
