@@ -3101,7 +3101,7 @@ background: #1D466C;
 </div>
 <section id="typical-approach" class="level3">
 <h3 class="anchored" data-anchor-id="typical-approach">Typical approach</h3>
-<p>This is a common scenario. We may want to use the same analysis in a variety of venues. Each venue may have a different set of requirements, a different audience, and so on. This implicitly means that the output must be reformatted to meet those specifications. For example, a printed publication, a CSR appendix, a shiny app, or an interactive document.</p>
+<p>This is a common scenario. We may want to use the same analysis in a variety of venues. Each venue may have a different set of requirements, a different audience, and so on. This implicitly means that the output must be reformatted to meet those specifications. For example, for a printed publication, a CSR appendix, a shiny app, or for an interactive document.</p>
 <p>We want to avoid repeating the same analysis by keeping the single source of truth and only reformat it. For example, we may have a new or separate team working on this request. They may not have the context of the analysis, so they try to recreate it with good intent and change specific settings.</p>
 <p>Below is a possible scenario where in recreating the analysis, the statistician uses settings in <code>Surv()</code> to estimate confidence intervals with the <em>log-log</em> method using a <em>robust</em> variance estimator. Although an appropriate approach, this deviates from the original statistical analysis plan. This increases the risk of presenting different numbers, creating confusion.</p>
 <div class="cell" data-layout-align="center">
@@ -3142,10 +3142,10 @@ background: #1D466C;
 <p>Think back to the previous exercise.</p>
 <ul>
 <li>What information have we stored according to the data model?</li>
-<li>Can this be computed without re-running the analysis?</li>
+<li>Can the additional information required be computed without re-running the analysis?</li>
 <li>Is there any information missing?</li>
 </ul>
-<p>Lets inspect the previous tables in the context of this new request.</p>
+<p>Let’s inspect the previous tables in the context of this new request.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -3252,7 +3252,7 @@ $ value       &lt;dbl&gt; 0.00000000, 500.00000000, 0.00000000, 0.00000000, 1.00
 </section>
 <section id="adding-the-table-below-the-plot" class="level3">
 <h3 class="anchored" data-anchor-id="adding-the-table-below-the-plot">Adding the table below the plot</h3>
-<p>To add the table with information at specific time points we need to calculate the cumulative sum for the number of events. This require a bit more code but, assuming the use of a data model you can also built functions to perform these tasks.</p>
+<p>To add the table with information at specific time points we need to calculate the cumulative sum for the number of events. This requires a bit more code but, assuming the use of a data model, you can also build functions to perform these tasks.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3435,7 +3435,7 @@ $ value       &lt;dbl&gt; 0.00000000, 500.00000000, 0.00000000, 0.00000000, 1.00
 <section id="additional-take-home-tasks-and-questions" class="level2">
 <h2 class="anchored" data-anchor-id="additional-take-home-tasks-and-questions">Additional (take-home) tasks and questions</h2>
 <ol type="1">
-<li><p>How would you calculate median survival using the ARD?</p></li>
+<li><p>How would you calculate the median survival using the ARD?</p></li>
 <li><p>Create a set of functions designed to work with the data following the ARDM. For example, one to create an interactive table and another a plot only using the stored information.</p></li>
 <li><p>Add additional survival analyses. Can you perform a meta-analysis using the information stored? What is missing?</p></li>
 </ol>

@@ -4332,7 +4332,7 @@ $ value       &lt;dbl&gt; </code></pre>
 </section>
 <section id="outputs-metadata" class="level3">
 <h3 class="anchored" data-anchor-id="outputs-metadata">Outputs metadata</h3>
-<p>For the title, labels, and legend, we store the respective strings and include related information such as the position of the labels and font weight. As before, we add two new fields to allow associating a description and id to each output. We call this table <em>outputs</em> since it stores information regarding the presentation of the analysis results.</p>
+<p>For the title, labels, and legend, we store the respective strings and include related information such as the position of the labels and font weight. As before, we add two new fields to allow associating a description and id to each output. We call this table <code>outputs</code> since it stores information regarding the presentation of the analysis results.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -4400,7 +4400,7 @@ $ output_id        &lt;chr&gt; </code></pre>
 </section>
 <section id="visualise-the-tables-linking" class="level3">
 <h3 class="anchored" data-anchor-id="visualise-the-tables-linking">Visualise the tables linking</h3>
-<p>To view how the linking of the tables, we can use a diagram and leverage the unique identifies to create primary keys in each table and foreign keys in <em>analyses</em> tables by referencing the primary key of the <em>surival_ard</em> and <em>outputs</em> tables.</p>
+<p>To view how the linking of the tables works, we can use a diagram and leverage the unique identifiers to create primary keys in each table and foreign keys in <code>analyses_metadata</code> tables by referencing the primary key of the <code>surival_ard</code> and <code>outputs</code> tables.</p>
 <p>This means that with an analysis identifier we can easily find the related analysis results and output metadata.</p>
 <div class="cell">
 <details open>
@@ -4421,15 +4421,15 @@ $ output_id        &lt;chr&gt; </code></pre>
 </details>
 <div class="cell-output-display">
 
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5816d2ccb2ee87343eb3" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-5816d2ccb2ee87343eb3">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=LR tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\npack=true\npackmode= \"node\"\n\n  \"analyses_metadata\" [id = \"analyses_metadata\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">analyses_metadata<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software_version<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">libraries<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">function_call<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"ard_id\">ard_id<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"output_id\">output_id<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"outputs\" [id = \"outputs\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">outputs<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">text<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">type<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">location<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">position<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">weight<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">color<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"survival_ard\" [id = \"survival_ard\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">survival_ard<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">strata<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">name<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">value<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"analyses_metadata\":\"ard_id\"->\"survival_ard\":\"id\" [id=\"analyses_metadata_1\"]\n\"analyses_metadata\":\"output_id\"->\"outputs\":\"id\" [id=\"analyses_metadata_2\"]\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b96e20041b83c6ac4b37" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b96e20041b83c6ac4b37">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=LR tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\npack=true\npackmode= \"node\"\n\n  \"analyses_metadata\" [id = \"analyses_metadata\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">analyses_metadata<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">software_version<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">libraries<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">function_call<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"ard_id\">ard_id<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"output_id\">output_id<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"outputs\" [id = \"outputs\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">outputs<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">text<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">type<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">location<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">position<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">weight<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">color<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"survival_ard\" [id = \"survival_ard\", label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"1\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">survival_ard<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\" PORT=\"id\"><U>id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">description<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">strata<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">name<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">value<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"analyses_metadata\":\"ard_id\"->\"survival_ard\":\"id\" [id=\"analyses_metadata_1\"]\n\"analyses_metadata\":\"output_id\"->\"outputs\":\"id\" [id=\"analyses_metadata_2\"]\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
 <section id="populating-the-tables" class="level3">
 <h3 class="anchored" data-anchor-id="populating-the-tables">Populating the tables</h3>
 <section id="survival_ard" class="level4">
-<h4 class="anchored" data-anchor-id="survival_ard"><em>survival_ard</em></h4>
+<h4 class="anchored" data-anchor-id="survival_ard"><code>survival_ard</code></h4>
 <p>To calculate the KM estimates we need the source data, namely the ADTTE dataset available in the datasets folder.</p>
 <div class="cell">
 <details open>
@@ -4487,7 +4487,7 @@ $ value       &lt;dbl&gt; 0.00000000, 500.00000000, 0.00000000, 0.00000000, 1.00
 </div>
 </section>
 <section id="outputs" class="level4">
-<h4 class="anchored" data-anchor-id="outputs"><em>outputs</em></h4>
+<h4 class="anchored" data-anchor-id="outputs"><code>outputs</code></h4>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -4524,8 +4524,8 @@ $ color       &lt;chr&gt; &quot;black&quot;, &quot;black&quot;, &quot;black&quot
 </div>
 </div>
 </section>
-<section id="analyses" class="level4">
-<h4 class="anchored" data-anchor-id="analyses"><em>analyses</em></h4>
+<section id="analyses_metadata" class="level4">
+<h4 class="anchored" data-anchor-id="analyses_metadata"><code>analyses_metadata</code></h4>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -4561,7 +4561,7 @@ $ output_id        &lt;chr&gt; &quot;OUT01&quot;</code></pre>
 </section>
 <section id="recreating-the-plot" class="level2">
 <h2 class="anchored" data-anchor-id="recreating-the-plot">Recreating the plot</h2>
-<p>First, we extract the tile, labels, and legend information from <em>output</em>. Since this is a simple example, the querying process is straightforward. In a more complex situation, we would need the analysis id to in turn find the respective output id and related information.</p>
+<p>First, we extract the title, labels, and legend information from <code>outputs</code>. Since this is a simple example, the querying process is straightforward. In a more complex situation, we would need the analysis id to in turn find the respective output id and related information.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -4629,7 +4629,7 @@ $ output_id        &lt;chr&gt; &quot;OUT01&quot;</code></pre>
 <section id="additional-take-home-tasks-and-questions" class="level2">
 <h2 class="anchored" data-anchor-id="additional-take-home-tasks-and-questions">Additional (take-home) tasks and questions</h2>
 <ol type="1">
-<li><p>Attempt to create a relation database, using {DBI} and {RSQLite}, following this data model.</p></li>
+<li><p>Attempt to create a relational database, using {DBI} and {RSQLite}, following this data model.</p></li>
 <li><p>Include additional survival analysis and outputs. What information is missing and not recorded by this data model?</p></li>
 <li><p>Expand the analyses table to ensure (as best possible) the analysis reproducibility.</p></li>
 </ol>

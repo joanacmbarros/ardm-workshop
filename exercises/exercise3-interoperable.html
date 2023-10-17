@@ -3066,11 +3066,11 @@ background: #1D466C;
 
 <section id="scenario" class="level2">
 <h2 class="anchored" data-anchor-id="scenario">Scenario</h2>
-<p>Image the same person from exercise 2 comes back with a new finding and a new request:</p>
+<p>Imagine the same person from exercise 2 comes back with a new finding and a new request:</p>
 <blockquote class="blockquote">
 <p>I just found the SAS results dataset corresponding to the analysis you did before! It was stored in a not-so-ideally-named folder and, unfortunately, I could not find the corresponding script to recreate the analysis. Please, plot these results and compare to your previous KM plots to confirm the results match.</p>
 </blockquote>
-<p>To ensure these results are not lost again and to test the robustness of our model, we will add the SAS results to our tables . Then, we can apply the same code from exercise 1 to recreate the Kaplan-Meier plot.</p>
+<p>To ensure these results are not lost again and to test the robustness of our model, we will add the SAS results to our tables. Then, we can apply the same code from exercise 1 to recreate the Kaplan-Meier plot.</p>
 </section>
 <section id="explore-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="explore-the-data">Explore the data</h2>
@@ -3109,7 +3109,7 @@ $ STRATUM    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 </div>
 <section id="fill-the-survival_ard-table" class="level3">
 <h3 class="anchored" data-anchor-id="fill-the-survival_ard-table">Fill the <code>survival_ard</code> table</h3>
-<p>Unfortunately, this data sets does not contain information on the number at risk and number of event. However, we can fill the <code>survival_ard</code> table with the available information. Next, we can fill the <code>analyses_metadata</code> table.</p>
+<p>Unfortunately, this dataset does not contain information on the number at risk and number of events. However, we can fill the <code>survival_ard</code> table with the available information. Next, we can fill the <code>analyses_metadata</code> table.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -3149,7 +3149,7 @@ $ STRATUM    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 </section>
 <section id="fill-the-analyses_metadata-table" class="level3">
 <h3 class="anchored" data-anchor-id="fill-the-analyses_metadata-table">Fill the <code>analyses_metadata</code> table</h3>
-<p>This one is more tricky since we do not have much information in the datasets provided. All we know is the name of the procedure and the software used. As output_id we will use the same as in exercise 1 and 2.</p>
+<p>This one is more tricky since we do not have much information in the datasets provided. All we know is the name of the procedure and the software used. As <code>output_id</code> we will use the same as in exercise 1 and 2.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -3173,7 +3173,7 @@ $ STRATUM    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 </section>
 <section id="reproducing-the-plot" class="level3">
 <h3 class="anchored" data-anchor-id="reproducing-the-plot">Reproducing the plot</h3>
-<p>We can now reproduce the plot using the code from exercise 1 using the data in <em>survival_ard</em> and <em>outputs</em>.</p>
+<p>We can now reproduce the plot using the code from exercise 1 using the data in <code>survival_ard</code> and <code>outputs</code>.</p>
 <div class="cell">
 <details open>
 <summary>Code</summary>
@@ -3305,7 +3305,7 @@ $ STRATUM    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 <section id="additional-take-home-tasks-and-questions" class="level2">
 <h2 class="anchored" data-anchor-id="additional-take-home-tasks-and-questions">Additional (take-home) tasks and questions</h2>
 <ol type="1">
-<li><p>You were just given another SAS dataset complementing the previous one (<em>survival_ard_part2.sas7bdat</em> in /data). This new dataset also includes the number at risk and number of events information. How would edit the <em>survival_ard</em> analysis A02 to add this information?</p></li>
+<li><p>You were just given another SAS dataset complementing the previous one (<code>survival_ard_part2.sas7bdat</code> in /data). This new dataset also includes the number at risk and number of events information. How would edit the <code>survival_ard</code> analysis A02 to add this information?</p></li>
 <li><p>Try to do the same exercise using a survival analysis output from another language you are familiar with. Are we missing important information?</p></li>
 </ol>
 </section>
