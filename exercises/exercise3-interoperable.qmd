@@ -20,6 +20,7 @@ format:
 #| label: load packages
 #| message: false
 #| echo: false
+#| warning: false
 
 library(tidyverse)
 library(ggalt)
@@ -47,7 +48,7 @@ sas_data <- read_sas(here("data", "survival_ard.sas7bdat"))
 glimpse(sas_data)
 ```
 
-Hmm, I'm not sure what these variables mean. Luckily, the SAS documentation is freely available. There also seems to be a mismatch in the column names (and case) although they refer to the same variable (i.e., TRTP and Stratum). We have to take some educated guesses.
+Hmm, I'm not sure what these variables mean. Luckily, the [SAS documentation](https://documentation.sas.com/doc/en/statug/15.2/statug_lifetest_toc.htm) is freely available. There also seems to be a mismatch in the column names (and case) although they refer to the same variable (i.e., TRTP and Stratum). We have to take some educated guesses.
 
 ![](images/sas-proc-lifetest.png){fig-align="center"}
 
@@ -218,6 +219,12 @@ Comparing the two plots.
 :::
 
 Unfortunately, we do not have enough information to find out why this difference occurs since the analysis metadata associated with the SAS results is incomplete.
+
+Unfortunately, this is not clear from the data model. To spot this difference one would need to be familiar with both algorithms. Ideally, the data model would also capture this information. This means we need to redesign the analyses_metadata table.
+
+* What do you think could be the reason(s) why both plots differ? [^Hint]
+
+[^Hint]: Take another look at the [SAS documentation](https://documentation.sas.com/doc/en/statug/15.2/statug_lifetest_toc.htm). Did you notice that there are a number of options for calculating the survival probability. Do we know from the data set alone which estimator was chosen? Do we also know if the selected method corresponded to the intended analysis reported in the SAP? Do we also know if the implementation corresponds to the same implementation used within the {Survival} package? This raises important point about analysis reproducibility. You can find more about discrepancies between software in the [CAMIS website](https://psiaims.github.io/CAMIS/).
 
 ## Back to the drawing board
 
