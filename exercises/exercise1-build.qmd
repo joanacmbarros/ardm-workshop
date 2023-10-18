@@ -14,6 +14,8 @@ format:
     code-overflow: wrap
     highlight-style: github
     theme: ../custom.scss
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r}
@@ -26,7 +28,7 @@ library(rmarkdown)
 library(quarto)
 library(DiagrammeR)
 library(survival)
-library(ggsurvfit)
+library(broom)
 library(tidyverse)
 library(ggalt)
 library(here)
@@ -180,8 +182,8 @@ adtte <- readRDS(here("data", "adtte.rds"))
 
 Then, we calculate the estimates using {survival} and store the
 information with the names and structure defined earlier. To help
-extracting and tidying up the data, we use `tidy_survfit()` from
-{ggsurvfit}.
+extracting and tidying up the data, we use `tidy()` from
+{broom}.
 
 ```{r}
 #| label: get_estimates
@@ -189,7 +191,7 @@ estimates <- survival::survfit(survival::Surv(time = AVAL, event = 1 - CNSR) ~ T
   data = adtte
 )
 
-tidy_estimates <- tidy_survfit(estimates)
+tidy_estimates <- tidy(estimates)
 
 survival_ard <- tidy_estimates |>
   mutate(
