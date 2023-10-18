@@ -31,9 +31,9 @@ library(haven)
 
 Imagine the same person from exercise 2 comes back with a new finding and a new request:
 
-> I just found the SAS results dataset corresponding to the analysis you did before! It was stored in a not-so-ideally-named folder and, unfortunately, I could not find the corresponding script to recreate the analysis. Please, plot these results and compare to your previous KM plots to confirm the results match.
+> I have the SAS results from the survival analysis you had to do before! Please, plot these results and compare to your previous KM plots to confirm whether the results match.
 
-To ensure these results are not lost again and to test the robustness of our model, we will add the SAS results to our tables. Then, we can apply the same code from exercise 1 to recreate the Kaplan-Meier plot.
+To ensure these results are not lost and to test the robustness of our model, we will add the SAS results to our tables. Then, we can apply the same code from exercise 1 to recreate the Kaplan-Meier plot.
 
 ## Explore the data
 
@@ -217,9 +217,7 @@ When looking at both plots, it seems there are differences in the curves. For ex
 Comparing the two plots.
 :::
 
-Another look at the SAS documentation shows that the out-of-box procedure *lifetest* calculates the confidence bands using [*log-log*](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_lifetest_syntax01.htm#statug.lifetest.lftconftype). Instead, R's {survival} `Surv()` uses *log transformation*. You can find more about discrepancies between software in the [CAMIS website](https://psiaims.github.io/CAMIS/).
-
-Unfortunately, this is not clear from the data model. To spot this difference one would need to be familiar with both algorithms. Ideally, the data model would also capture this information. This means we need to redesign the `analyses_metadata` table.
+Unfortunately, we do not have enough information to find out why this difference occurs since the analysis metadata associated with the SAS results is incomplete.
 
 ## Back to the drawing board
 
